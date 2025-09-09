@@ -1,2 +1,3 @@
 # BIOT670i---Project-5
-Working repository for project 5
+
+Hey everyone, this is the github repo that was discussed during our meeting
