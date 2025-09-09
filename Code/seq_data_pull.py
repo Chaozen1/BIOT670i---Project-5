@@ -55,7 +55,7 @@ def write_commands_to_file(sra_ids, filename):
         f.write("# Please make sure the SRA Toolkit is installed and in your PATH.\n\n")
         
         # Write prefetch command
-        f.write(f"prefetch {' '.join(sra_ids)}\n")
+        f.write(f"prefetch --max-size u {' '.join(sra_ids)}\n")
         
         # Write fastq-dump command
         f.write(f"fastq-dump --split-files --gzip {' '.join(sra_ids)}\n")
