@@ -1,0 +1,54 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Leuconostoc	50157	G	35359	5894	41253	0.45172
+Dellaglioa	50146	G	9589	573	10162	0.11127
+Companilactobacillus	50145	G	938	58	996	0.01091
+Lactiplantibacillus	50153	G	895	1706	2601	0.02848
+Limosilactobacillus	50160	G	554	342	896	0.00981
+Lacticaseibacillus	50152	G	469	538	1007	0.01103
+Lactobacillus	1837	G	422	137	559	0.00612
+Pediococcus	1838	G	292	116	408	0.00447
+Latilactobacillus	50155	G	230	682	912	0.00999
+Schleiferilactobacillus	50166	G	178	0	178	0.00195
+Levilactobacillus	50158	G	121	239	360	0.00394
+Ligilactobacillus	50159	G	80	13	93	0.00102
+Secundilactobacillus	50167	G	72	144	216	0.00237
+Bombilactobacillus	50144	G	60	10	70	0.00077
+HT002	50150	G	49	32	81	0.00089
+Lentilactobacillus	50156	G	48	18	66	0.00072
+Lapidilactobacillus	50154	G	47	1	48	0.00053
+Paucilactobacillus	50165	G	45	14	59	0.00065
+Fructilactobacillus	50147	G	44	3	47	0.00051
+Loigolactobacillus	50162	G	44	20	64	0.00070
+Weissella	50168	G	23	5	28	0.00031
+Furfurilactobacillus	50149	G	13	9	22	0.00024
+uncultured	50169	G	10	7	17	0.00019
+Brochothrix	45257	G	5249	6	5255	0.05754
+Carnobacterium	1818	G	280	1	281	0.00308
+Vagococcus	45262	G	95	0	95	0.00104
+Streptococcus	1853	G	15	0	15	0.00016
+Aerococcus	1804	G	20	0	20	0.00022
+Enterococcus	1831	G	18	0	18	0.00020
+Bacillus	1688	G	34	12	46	0.00050
+Clostridium sensu stricto 5	45356	G	1217	50	1267	0.01387
+Clostridium sensu stricto 1	45342	G	33	7	40	0.00044
+Clostridium sensu stricto 9	45360	G	31	3	34	0.00037
+Peptostreptococcus	45629	G	588	1	589	0.00645
+Pseudomonas	3723	G	11846	3139	14985	0.16408
+Psychrobacter	3716	G	1307	1583	2890	0.03165
+Acinetobacter	3711	G	708	2558	3266	0.03576
+Enhydrobacter	3713	G	53	351	404	0.00442
+Moraxella	3714	G	42	260	302	0.00331
+Marinobacter	50423	G	61	14	75	0.00082
+uncultured	50439	G	25	11	36	0.00039
+Amphritea	50429	G	12	0	12	0.00013
+Neptuniibacter	50434	G	12	0	12	0.00013
+Endozoicomonas	50381	G	50	0	50	0.00055
+Shewanella	50332	G	630	371	1001	0.01096
+Vibrio	50351	G	74	55	129	0.00141
+Plesiomonas	46470	G	10	16	26	0.00028
+Janthinobacterium	46387	G	15	9	24	0.00026
+Massilia	46388	G	10	7	17	0.00019
+uncultured	3770	G	17	0	17	0.00019
+Microbacterium	43534	G	20	103	123	0.00135
+Myroides	44258	G	119	0	119	0.00130
+Rikenellaceae RC9 gut group	43972	G	12	0	12	0.00013

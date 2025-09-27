@@ -1,0 +1,17 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Dellaglioa	50146	G	76706	766	77472	0.86223
+Leuconostoc	50157	G	11181	317	11498	0.12797
+Lactiplantibacillus	50153	G	197	64	261	0.00290
+Pediococcus	1838	G	101	6	107	0.00119
+Weissella	50168	G	68	2	70	0.00078
+Limosilactobacillus	50160	G	56	5	61	0.00068
+Paucilactobacillus	50165	G	49	2	51	0.00057
+Lacticaseibacillus	50152	G	46	9	55	0.00061
+Lactobacillus	1837	G	44	2	46	0.00051
+Ligilactobacillus	50159	G	25	0	25	0.00028
+Latilactobacillus	50155	G	23	11	34	0.00038
+Levilactobacillus	50158	G	15	5	20	0.00022
+Lapidilactobacillus	50154	G	12	0	12	0.00013
+Salinivibrio	50349	G	51	16	67	0.00075
+Photobacterium	50348	G	16	21	37	0.00041
+Pseudomonas	3723	G	25	1	26	0.00029
