@@ -1,0 +1,13 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Dellaglioa	50146	G	32223	579	32802	0.95797
+Lactiplantibacillus	50153	G	102	59	161	0.00470
+Lacticaseibacillus	50152	G	87	41	128	0.00374
+Limosilactobacillus	50160	G	63	13	76	0.00222
+Weissella	50168	G	60	4	64	0.00187
+Paucilactobacillus	50165	G	56	5	61	0.00178
+Lactobacillus	1837	G	50	6	56	0.00164
+Ligilactobacillus	50159	G	48	4	52	0.00152
+Pediococcus	1838	G	45	5	50	0.00146
+Lapidilactobacillus	50154	G	22	0	22	0.00064
+Latilactobacillus	50155	G	21	19	40	0.00117
+Brochothrix	45257	G	700	21	721	0.02106
