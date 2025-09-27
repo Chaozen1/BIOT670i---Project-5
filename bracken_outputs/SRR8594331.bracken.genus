@@ -1,0 +1,45 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Dellaglioa	50146	G	4267	607	4874	0.22087
+Leuconostoc	50157	G	464	60	524	0.02375
+Pediococcus	1838	G	185	53	238	0.01079
+Lactobacillus	1837	G	178	44	222	0.01006
+Lactiplantibacillus	50153	G	113	155	268	0.01214
+Latilactobacillus	50155	G	97	214	311	0.01409
+Lacticaseibacillus	50152	G	48	41	89	0.00403
+Limosilactobacillus	50160	G	40	18	58	0.00263
+Ligilactobacillus	50159	G	23	4	27	0.00122
+Schleiferilactobacillus	50166	G	13	0	13	0.00059
+Levilactobacillus	50158	G	11	15	26	0.00118
+Companilactobacillus	50145	G	11	0	11	0.00050
+Lapidilactobacillus	50154	G	10	0	10	0.00045
+Brochothrix	45257	G	6127	73	6200	0.28096
+Enterococcus	1831	G	103	12	115	0.00521
+Carnobacterium	1818	G	56	11	67	0.00304
+Granulicatella	1821	G	10	0	10	0.00045
+Streptococcus	1853	G	23	2	25	0.00113
+Bacillus	1688	G	52	34	86	0.00390
+Anoxybacillus	1686	G	32	8	40	0.00181
+Staphylococcus	45295	G	15	0	15	0.00068
+Clostridium sensu stricto 5	45356	G	350	6	356	0.01613
+Clostridium sensu stricto 1	45342	G	14	1	15	0.00068
+Clostridium sensu stricto 9	45360	G	12	0	12	0.00054
+Peptostreptococcus	45629	G	157	0	157	0.00711
+Peptoniphilus	50203	G	84	0	84	0.00381
+Gallicola	50198	G	30	0	30	0.00136
+Pseudomonas	3723	G	2870	888	3758	0.17030
+Psychrobacter	3716	G	451	353	804	0.03643
+Acinetobacter	3711	G	382	710	1092	0.04949
+Enhydrobacter	3713	G	15	50	65	0.00295
+Moraxella	3714	G	15	46	61	0.00276
+uncultured	50439	G	13	6	19	0.00086
+Endozoicomonas	50381	G	19	0	19	0.00086
+Marinobacter	50423	G	16	4	20	0.00091
+Serratia	46541	G	933	387	1320	0.05982
+Salinivibrio	50349	G	337	11	348	0.01577
+Photobacterium	50348	G	332	46	378	0.01713
+Vibrio	50351	G	22	3	25	0.00113
+Pseudoalteromonas	50321	G	115	8	123	0.00557
+Escherichia-Shigella	46463	G	29	10	39	0.00177
+Citrobacter	46459	G	16	23	39	0.00177
+Pragia	46453	G	22	6	28	0.00127
+Brevibacterium	43427	G	22	5	27	0.00122

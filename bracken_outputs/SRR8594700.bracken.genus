@@ -1,0 +1,11 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Leuconostoc	50157	G	48494	302	48796	0.60766
+Dellaglioa	50146	G	30531	63	30594	0.38099
+Lactiplantibacillus	50153	G	46	2	48	0.00060
+Weissella	50168	G	24	0	24	0.00030
+Limosilactobacillus	50160	G	18	0	18	0.00022
+Lactobacillus	1837	G	12	0	12	0.00015
+Paucilactobacillus	50165	G	11	0	11	0.00014
+Ligilactobacillus	50159	G	11	0	11	0.00014
+Brochothrix	45257	G	764	0	764	0.00951
+Salinivibrio	50349	G	13	7	20	0.00025
