@@ -1,0 +1,21 @@
+Feature,Coefficient,odds_ratio_per_SD
+Day_numeric,1.8456790405180894,6.332398285823377
+Brochothrix,0.09748004858839196,1.1023894471183049
+Ligilactobacillus,0.08970297511286265,1.0938493349734035
+Idiomarina,-0.03255591716944896,0.9679683222692925
+Unnamed: 0,-0.030445935964048897,0.9700128734604648
+Flavobacterium,-0.026666882650105184,0.9736855390531716
+Paracoccus,-0.01818630529614907,0.981978067600482
+Clostridium sensu stricto 5,-0.004603424003677829,0.9954071555123759
+Oleiphilus,0.0,1.0
+Pajaroellobacter,0.0,1.0
+Paucilactobacillus,0.0,1.0
+Pasteurella,0.0,1.0
+Paraprevotella,0.0,1.0
+Paralactobacillus,0.0,1.0
+Ochrobactrum,0.0,1.0
+Paraclostridium,0.0,1.0
+Pantoea,0.0,1.0
+Paludicola,0.0,1.0
+Paenisporosarcina,0.0,1.0
+Oleispira,0.0,1.0
