@@ -1,0 +1,715 @@
+Sample_Name	Meat_Type	Campaign	Sampling_Time	Lactate_Dose	Packaging	Amplicon_16S	Amplicon_gyrB	Volatilome_Analysis	Sensorial_Profile	pH	Packaging_Gas_Analysis	Total cfu.g-1	LAB cfu.g-1	Chromametry																			
+C01TB	Poultry	n¡ã1	Gut	None	None							X	X																				
+C01TD	Poultry	n¡ã1	Primal_cut	None	None							X	X																				
+C01TE	Poultry	n¡ã1	Spices	None	None							X	X																				
+C01TG	Poultry	n¡ã1	Fat	None	None							X	X																				
+C01T0A	Poultry	n¡ã1	T0	Normal_dose	None	X	X	X		X	x	X	X	X																			
+C01T0B	Poultry	n¡ã1	T0	Half_dose	None	X	X			X	x	X	X																				
+C01T0C	Poultry	n¡ã1	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C01T1A1	Poultry	n¡ã1	T1	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C01T1A2	Poultry	n¡ã1	T1	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C01T1A3	Poultry	n¡ã1	T1	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C01T1B1	Poultry	n¡ã1	T1	Half_dose	Air	X	X			X	x	X	X																				
+C01T1B2	Poultry	n¡ã1	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C01T1B3	Poultry	n¡ã1	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C01T1C1	Poultry	n¡ã1	T1	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C01T1C2	Poultry	n¡ã1	T1	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C01T1C3	Poultry	n¡ã1	T1	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C01T2A1	Poultry	n¡ã1	T2	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C01T2A2	Poultry	n¡ã1	T2	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C01T2A3	Poultry	n¡ã1	T2	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C01T2B1	Poultry	n¡ã1	T2	Half_dose	Air	X	X			X	x	X	X																				
+C01T2B2	Poultry	n¡ã1	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C01T2B3	Poultry	n¡ã1	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C01T2C1	Poultry	n¡ã1	T2	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C01T2C2	Poultry	n¡ã1	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C01T2C3	Poultry	n¡ã1	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C01T3A1	Poultry	n¡ã1	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			x
+C01T3A2	Poultry	n¡ã1	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C01T3A3	Poultry	n¡ã1	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C01T3B1	Poultry	n¡ã1	T3	Half_dose	Air	X	X			X	x	X	X																				
+C01T3B2	Poultry	n¡ã1	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C01T3B3	Poultry	n¡ã1	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C01T3C1	Poultry	n¡ã1	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C01T3C2	Poultry	n¡ã1	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C01T3C3	Poultry	n¡ã1	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C02TB	Poultry	n¡ã2	Gut	None	None																												
+C02TD	Poultry	n¡ã2	Primal_cut	None	None							X	X																				
+C02TE	Poultry	n¡ã2	Spices	None	None																												
+C02TG	Poultry	n¡ã2	Fat	None	None							X	X																				
+C02T0A	Poultry	n¡ã2	T0	Normal_dose	None	X	X	X	X	X	x	X	X	X																			
+C02T0B	Poultry	n¡ã2	T0	Half_dose	None	X	X			X	x	X	X																				
+C02T0C	Poultry	n¡ã2	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C02T1A1	Poultry	n¡ã2	T1	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C02T1A2	Poultry	n¡ã2	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C02T1A3	Poultry	n¡ã2	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C02T1B1	Poultry	n¡ã2	T1	Half_dose	Air	X	X			X	x	X	X																				
+C02T1B2	Poultry	n¡ã2	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C02T1B3	Poultry	n¡ã2	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C02T1C1	Poultry	n¡ã2	T1	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C02T1C2	Poultry	n¡ã2	T1	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C02T1C3	Poultry	n¡ã2	T1	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C02T2A1	Poultry	n¡ã2	T2	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C02T2A2	Poultry	n¡ã2	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C02T2A3	Poultry	n¡ã2	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C02T2B1	Poultry	n¡ã2	T2	Half_dose	Air	X	X			X	x	X	X																				
+C02T2B2	Poultry	n¡ã2	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C02T2B3	Poultry	n¡ã2	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C02T2C1	Poultry	n¡ã2	T2	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C02T2C2	Poultry	n¡ã2	T2	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C02T2C3	Poultry	n¡ã2	T2	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C02T3A1	Poultry	n¡ã2	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C02T3A2	Poultry	n¡ã2	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C02T3A3	Poultry	n¡ã2	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C02T3B1	Poultry	n¡ã2	T3	Half_dose	Air	X	X			X	x	X	X																				
+C02T3B2	Poultry	n¡ã2	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C02T3B3	Poultry	n¡ã2	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C02T3C1	Poultry	n¡ã2	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C02T3C2	Poultry	n¡ã2	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C02T3C3	Poultry	n¡ã2	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C03TB	Poultry	n¡ã3	Gut	None	None							X	X																				
+C03TD	Poultry	n¡ã3	Primal_cut	None	None							X	X																				
+C03TE	Poultry	n¡ã3	Spices	None	None							X	X																				
+C03TG	Poultry	n¡ã3	Fat	None	None							X	X																				
+C03T0A	Poultry	n¡ã3	T0	Normal_dose	None	X	X	X	X	X	x	X	X	X																			
+C03T0B	Poultry	n¡ã3	T0	Half_dose	None	X	X			X	x	X	X																				
+C03T0C	Poultry	n¡ã3	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C03T1A1	Poultry	n¡ã3	T1	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C03T1A2	Poultry	n¡ã3	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C03T1A3	Poultry	n¡ã3	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C03T1B1	Poultry	n¡ã3	T1	Half_dose	Air	X	X			X	x	X	X																				
+C03T1B2	Poultry	n¡ã3	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C03T1B3	Poultry	n¡ã3	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C03T1C1	Poultry	n¡ã3	T1	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C03T1C2	Poultry	n¡ã3	T1	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C03T1C3	Poultry	n¡ã3	T1	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C03T2A1	Poultry	n¡ã3	T2	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C03T2A2	Poultry	n¡ã3	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C03T2A3	Poultry	n¡ã3	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C03T2B1	Poultry	n¡ã3	T2	Half_dose	Air	X	X			X	x	X	X																				
+C03T2B2	Poultry	n¡ã3	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C03T2B3	Poultry	n¡ã3	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C03T2C1	Poultry	n¡ã3	T2	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C03T2C2	Poultry	n¡ã3	T2	Zero_dose	70%O2_30%CO2	X		X	X	X	x	X	X	X																			
+C03T2C3	Poultry	n¡ã3	T2	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C03T3A1	Poultry	n¡ã3	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C03T3A2	Poultry	n¡ã3	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C03T3A3	Poultry	n¡ã3	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C03T3B1	Poultry	n¡ã3	T3	Half_dose	Air	X	X			X	x	X	X																				
+C03T3B2	Poultry	n¡ã3	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C03T3B3	Poultry	n¡ã3	T3	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+C03T3C1	Poultry	n¡ã3	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C03T3C2	Poultry	n¡ã3	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C03T3C3	Poultry	n¡ã3	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C04TB	Poultry	n¡ã4	Gut	None	None							X	X																				
+C04TD	Poultry	n¡ã4	Primal_cut	None	None							X	X																				
+C04TE	Poultry	n¡ã4	Spices	None	None							X	X																				
+C04TG	Poultry	n¡ã4	Fat	None	None							X	X																				
+C04T0A	Poultry	n¡ã4	T0	Normal_dose	None	X	X	X		X	x	X	X	X																			
+C04T0B	Poultry	n¡ã4	T0	Half_dose	None	X	X			X	x	X	X																				
+C04T0C	Poultry	n¡ã4	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C04T1A1	Poultry	n¡ã4	T1	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C04T1A2	Poultry	n¡ã4	T1	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C04T1A3	Poultry	n¡ã4	T1	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C04T1B1	Poultry	n¡ã4	T1	Half_dose	Air	X	X			X	x	X	X																				
+C04T1B2	Poultry	n¡ã4	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C04T1B3	Poultry	n¡ã4	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C04T1C1	Poultry	n¡ã4	T1	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C04T1C2	Poultry	n¡ã4	T1	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C04T1C3	Poultry	n¡ã4	T1	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C04T2A1	Poultry	n¡ã4	T2	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C04T2A2	Poultry	n¡ã4	T2	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C04T2A3	Poultry	n¡ã4	T2	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C04T2B1	Poultry	n¡ã4	T2	Half_dose	Air	X	X			X	x	X	X																				
+C04T2B2	Poultry	n¡ã4	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C04T2B3	Poultry	n¡ã4	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C04T2C1	Poultry	n¡ã4	T2	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C04T2C2	Poultry	n¡ã4	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C04T2C3	Poultry	n¡ã4	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C04T3A1	Poultry	n¡ã4	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C04T3A2	Poultry	n¡ã4	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C04T3A3	Poultry	n¡ã4	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C04T3B1	Poultry	n¡ã4	T3	Half_dose	Air	X	X			X	x	X	X																				
+C04T3B2	Poultry	n¡ã4	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C04T3B3	Poultry	n¡ã4	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C04T3C1	Poultry	n¡ã4	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C04T3C2	Poultry	n¡ã4	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C04T3C3	Poultry	n¡ã4	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C05TB	Poultry	n¡ã5	Gut	None	None							X	X																				
+C05TD	Poultry	n¡ã5	Primal_cut	None	None							X	X																				
+C05TE	Poultry	n¡ã5	Spices	None	None																												
+C05TG	Poultry	n¡ã5	Fat	None	None							X	X																				
+C05T0A	Poultry	n¡ã5	T0	Normal_dose	None	X	X	X	X	X	x	X	X	X																			
+C05T0B	Poultry	n¡ã5	T0	Half_dose	None	X	X			X	x	X	X																				
+C05T0C	Poultry	n¡ã5	T0	Zero_dose	None	X	X	X	X	X	x	X	X																				
+C05T1A1	Poultry	n¡ã5	T1	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C05T1A2	Poultry	n¡ã5	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C05T1A3	Poultry	n¡ã5	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C05T1B1	Poultry	n¡ã5	T1	Half_dose	Air	X	X			X	x	X	X																				
+C05T1B2	Poultry	n¡ã5	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C05T1B3	Poultry	n¡ã5	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C05T1C1	Poultry	n¡ã5	T1	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C05T1C2	Poultry	n¡ã5	T1	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C05T1C3	Poultry	n¡ã5	T1	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C05T2A1	Poultry	n¡ã5	T2	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C05T2A2	Poultry	n¡ã5	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C05T2A3	Poultry	n¡ã5	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C05T2B1	Poultry	n¡ã5	T2	Half_dose	Air	X	X			X	x	X	X																				
+C05T2B2	Poultry	n¡ã5	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C05T2B3	Poultry	n¡ã5	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C05T2C1	Poultry	n¡ã5	T2	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C05T2C2	Poultry	n¡ã5	T2	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C05T2C3	Poultry	n¡ã5	T2	Zero_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+C05T3A1	Poultry	n¡ã5	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C05T3A2	Poultry	n¡ã5	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C05T3A3	Poultry	n¡ã5	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C05T3B1	Poultry	n¡ã5	T3	Half_dose	Air	X	X			X	x	X	X																				
+C05T3B2	Poultry	n¡ã5	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C05T3B3	Poultry	n¡ã5	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C05T3C1	Poultry	n¡ã5	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C05T3C2	Poultry	n¡ã5	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C05T3C3	Poultry	n¡ã5	T3	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+C06TB	Poultry	n¡ã6	Gut	None	None					X		X	X																				
+C06TD	Poultry	n¡ã6	Primal_cut	None	None		X			X		X	X																				
+C06TE	Poultry	n¡ã6	Spices	None	None					X																							
+C06TG	Poultry	n¡ã6	Fat	None	None		X			X		X	X																				
+C06T0A	Poultry	n¡ã6	T0	Normal_dose	None		X	X	X	X	x	X	X	X																			
+C06T0B	Poultry	n¡ã6	T0	Half_dose	None	X	X			X	x	X	X																				
+C06T0C	Poultry	n¡ã6	T0	Zero_dose	None	X	X	X	X	X	x	X	X																				
+C06T1A1	Poultry	n¡ã6	T1	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C06T1A2	Poultry	n¡ã6	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C06T1A3	Poultry	n¡ã6	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C06T1B1	Poultry	n¡ã6	T1	Half_dose	Air	X	X			X	x	X	X																				
+C06T1B2	Poultry	n¡ã6	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C06T1B3	Poultry	n¡ã6	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C06T1C1	Poultry	n¡ã6	T1	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C06T1C2	Poultry	n¡ã6	T1	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C06T1C3	Poultry	n¡ã6	T1	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C06T2A1	Poultry	n¡ã6	T2	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C06T2A2	Poultry	n¡ã6	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C06T2A3	Poultry	n¡ã6	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C06T2B1	Poultry	n¡ã6	T2	Half_dose	Air	X	X			X	x	X	X																				
+C06T2B2	Poultry	n¡ã6	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C06T2B3	Poultry	n¡ã6	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C06T2C1	Poultry	n¡ã6	T2	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C06T2C2	Poultry	n¡ã6	T2	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C06T2C3	Poultry	n¡ã6	T2	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C06T3A1	Poultry	n¡ã6	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C06T3A2	Poultry	n¡ã6	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C06T3A3	Poultry	n¡ã6	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C06T3B1	Poultry	n¡ã6	T3	Half_dose	Air	X	X			X	x	X	X																				
+C06T3B2	Poultry	n¡ã6	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C06T3B3	Poultry	n¡ã6	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C06T3C1	Poultry	n¡ã6	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C06T3C2	Poultry	n¡ã6	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C06T3C3	Poultry	n¡ã6	T3	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+C07TB	Poultry	n¡ã7	Gut	None	None					X		X	X																				
+C07TD	Poultry	n¡ã7	Primal_cut	None	None		X			X		X	X																				
+C07TE	Poultry	n¡ã7	Spices	None	None					X		X	X																				
+C07TG	Poultry	n¡ã7	Fat	None	None		X			X		X	X																				
+C07T0A	Poultry	n¡ã7	T0	Normal_dose	None	X	X	X		X	x	X	X	X																			
+C07T0B	Poultry	n¡ã7	T0	Half_dose	None	X	X			X	x	X	X																				
+C07T0C	Poultry	n¡ã7	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C07T1A1	Poultry	n¡ã7	T1	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C07T1A2	Poultry	n¡ã7	T1	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C07T1A3	Poultry	n¡ã7	T1	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C07T1B1	Poultry	n¡ã7	T1	Half_dose	Air	X	X			X	x	X	X																				
+C07T1B2	Poultry	n¡ã7	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C07T1B3	Poultry	n¡ã7	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C07T1C1	Poultry	n¡ã7	T1	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C07T1C2	Poultry	n¡ã7	T1	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C07T1C3	Poultry	n¡ã7	T1	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C07T2A1	Poultry	n¡ã7	T2	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C07T2A2	Poultry	n¡ã7	T2	Normal_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+C07T2A3	Poultry	n¡ã7	T2	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C07T2B1	Poultry	n¡ã7	T2	Half_dose	Air	X	X			X	x	X	X																				
+C07T2B2	Poultry	n¡ã7	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C07T2B3	Poultry	n¡ã7	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C07T2C1	Poultry	n¡ã7	T2	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C07T2C2	Poultry	n¡ã7	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C07T2C3	Poultry	n¡ã7	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C07T3A1	Poultry	n¡ã7	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C07T3A2	Poultry	n¡ã7	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C07T3A3	Poultry	n¡ã7	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C07T3B1	Poultry	n¡ã7	T3	Half_dose	Air	X	X			X	x	X	X																				
+C07T3B2	Poultry	n¡ã7	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C07T3B3	Poultry	n¡ã7	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C07T3C1	Poultry	n¡ã7	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C07T3C2	Poultry	n¡ã7	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C07T3C3	Poultry	n¡ã7	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C08TB	Poultry	n¡ã8	Gut	None	None					X		X	X																				
+C08TD	Poultry	n¡ã8	Primal_cut	None	None	X	X			X		X	X																				
+C08TE	Poultry	n¡ã8	Spices	None	None					X																							
+C08TG	Poultry	n¡ã8	Fat	None	None		X			X		X	X																				
+C08T0A	Poultry	n¡ã8	T0	Normal_dose	None	X	X	X	X	X	x	X	X	X																			
+C08T0B	Poultry	n¡ã8	T0	Half_dose	None	X	X			X	x	X	X																				
+C08T0C	Poultry	n¡ã8	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C08T1A1	Poultry	n¡ã8	T1	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C08T1A2	Poultry	n¡ã8	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C08T1A3	Poultry	n¡ã8	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C08T1B1	Poultry	n¡ã8	T1	Half_dose	Air	X	X			X	x	X	X																				
+C08T1B2	Poultry	n¡ã8	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C08T1B3	Poultry	n¡ã8	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C08T1C1	Poultry	n¡ã8	T1	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C08T1C2	Poultry	n¡ã8	T1	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C08T1C3	Poultry	n¡ã8	T1	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C08T2A1	Poultry	n¡ã8	T2	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C08T2A2	Poultry	n¡ã8	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C08T2A3	Poultry	n¡ã8	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C08T2B1	Poultry	n¡ã8	T2	Half_dose	Air	X	X			X	x	X	X																				
+C08T2B2	Poultry	n¡ã8	T2	Half_dose	70%O2_30%CO2	X				X	x	X	X																				
+C08T2B3	Poultry	n¡ã8	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C08T2C1	Poultry	n¡ã8	T2	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C08T2C2	Poultry	n¡ã8	T2	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C08T2C3	Poultry	n¡ã8	T2	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C08T3A1	Poultry	n¡ã8	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C08T3A2	Poultry	n¡ã8	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C08T3A3	Poultry	n¡ã8	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C08T3B1	Poultry	n¡ã8	T3	Half_dose	Air	X	X			X	x	X	X																				
+C08T3B2	Poultry	n¡ã8	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C08T3B3	Poultry	n¡ã8	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C08T3C1	Poultry	n¡ã8	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C08T3C2	Poultry	n¡ã8	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C08T3C3	Poultry	n¡ã8	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C09TB	Poultry	n¡ã9	Gut	None	None					X		X	X																				
+C09TD	Poultry	n¡ã9	Primal_cut	None	None					X		X	X																				
+C09TE	Poultry	n¡ã9	Spices	None	None					X		X	X																				
+C09TG	Poultry	n¡ã9	Fat	None	None					X		X	X																				
+C09T0A	Poultry	n¡ã9	T0	Normal_dose	None		X	X		X	x	X	X	X																			
+C09T0B	Poultry	n¡ã9	T0	Half_dose	None	X	X			X	x	X	X																				
+C09T0C	Poultry	n¡ã9	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C09T1A1	Poultry	n¡ã9	T1	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C09T1A2	Poultry	n¡ã9	T1	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C09T1A3	Poultry	n¡ã9	T1	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C09T1B1	Poultry	n¡ã9	T1	Half_dose	Air	X	X			X	x	X	X																				
+C09T1B2	Poultry	n¡ã9	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C09T1B3	Poultry	n¡ã9	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C09T1C1	Poultry	n¡ã9	T1	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C09T1C2	Poultry	n¡ã9	T1	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C09T1C3	Poultry	n¡ã9	T1	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C09T2A1	Poultry	n¡ã9	T2	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C09T2A2	Poultry	n¡ã9	T2	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C09T2A3	Poultry	n¡ã9	T2	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C09T2B1	Poultry	n¡ã9	T2	Half_dose	Air	X	X			X	x	X	X																				
+C09T2B2	Poultry	n¡ã9	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C09T2B3	Poultry	n¡ã9	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C09T2C1	Poultry	n¡ã9	T2	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C09T2C2	Poultry	n¡ã9	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C09T2C3	Poultry	n¡ã9	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C09T3A1	Poultry	n¡ã9	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C09T3A2	Poultry	n¡ã9	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C09T3A3	Poultry	n¡ã9	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C09T3B1	Poultry	n¡ã9	T3	Half_dose	Air	X	X			X	x	X	X																				
+C09T3B2	Poultry	n¡ã9	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C09T3B3	Poultry	n¡ã9	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C09T3C1	Poultry	n¡ã9	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C09T3C2	Poultry	n¡ã9	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C09T3C3	Poultry	n¡ã9	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C10TB	Poultry	n¡ã10	Gut	None	None							X	X																				
+C10TD	Poultry	n¡ã10	Primal_cut	None	None							X	X																				
+C10TE	Poultry	n¡ã10	Spices	None	None																												
+C10TG	Poultry	n¡ã10	Fat	None	None							X	X																				
+C10T0A	Poultry	n¡ã10	T0	Normal_dose	None	X	X	X	X	X	x	X	X	X																			
+C10T0B	Poultry	n¡ã10	T0	Half_dose	None		X			X	x	X	X																				
+C10T0C	Poultry	n¡ã10	T0	Zero_dose	None	X	X	X		X	x	X	X																				
+C10T1A1	Poultry	n¡ã10	T1	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C10T1A2	Poultry	n¡ã10	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C10T1A3	Poultry	n¡ã10	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C10T1B1	Poultry	n¡ã10	T1	Half_dose	Air	X	X			X	x	X	X																				
+C10T1B2	Poultry	n¡ã10	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C10T1B3	Poultry	n¡ã10	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C10T1C1	Poultry	n¡ã10	T1	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C10T1C2	Poultry	n¡ã10	T1	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C10T1C3	Poultry	n¡ã10	T1	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C10T2A1	Poultry	n¡ã10	T2	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+C10T2A2	Poultry	n¡ã10	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C10T2A3	Poultry	n¡ã10	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C10T2B1	Poultry	n¡ã10	T2	Half_dose	Air	X	X			X	x	X	X																				
+C10T2B2	Poultry	n¡ã10	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C10T2B3	Poultry	n¡ã10	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C10T2C1	Poultry	n¡ã10	T2	Zero_dose	Air	X	X	X	X	X	x	X	X	X																			
+C10T2C2	Poultry	n¡ã10	T2	Zero_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+C10T2C3	Poultry	n¡ã10	T2	Zero_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+C10T3A1	Poultry	n¡ã10	T3	Normal_dose	Air	X	X	X		X	x	X	X	X																			
+C10T3A2	Poultry	n¡ã10	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C10T3A3	Poultry	n¡ã10	T3	Normal_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+C10T3B1	Poultry	n¡ã10	T3	Half_dose	Air	X	X			X	x	X	X																				
+C10T3B2	Poultry	n¡ã10	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+C10T3B3	Poultry	n¡ã10	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+C10T3C1	Poultry	n¡ã10	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+C10T3C2	Poultry	n¡ã10	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+C10T3C3	Poultry	n¡ã10	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P01TB	Pork	n¡ã1	Gut	None	None	X	X			X		X	X																				
+P01TD	Pork	n¡ã1	Primal_cut	None	None	X	X			X		X	X																				
+P01TE	Pork	n¡ã1	Spices	None	None	X	X			X		X	X																				
+P01TG	Pork	n¡ã1	Fat	None	None	X				X		X	X																				
+P01T0A	Pork	n¡ã1	T0	Normal_dose	None			X	X	X		X	X	X																			
+P01T0B	Pork	n¡ã1	T0	Half_dose	None					X		X	X																				
+P01T0C	Pork	n¡ã1	T0	Zero_dose	None			X		X		X	X																				
+P01T1A1	Pork	n¡ã1	T1	Normal_dose	Air			X	X	X		X	X	X																			
+P01T1A2	Pork	n¡ã1	T1	Normal_dose	70%O2_30%CO2		X	X	X	X	x	X	X	X																			
+P01T1A3	Pork	n¡ã1	T1	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P01T1B1	Pork	n¡ã1	T1	Half_dose	Air	X	X			X		X	X																				
+P01T1B2	Pork	n¡ã1	T1	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P01T1B3	Pork	n¡ã1	T1	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P01T1C1	Pork	n¡ã1	T1	Zero_dose	Air		X	X		X		X	X	X																			
+P01T1C2	Pork	n¡ã1	T1	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P01T1C3	Pork	n¡ã1	T1	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P01T2A1	Pork	n¡ã1	T2	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P01T2A2	Pork	n¡ã1	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P01T2A3	Pork	n¡ã1	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P01T2B1	Pork	n¡ã1	T2	Half_dose	Air	X	X			X		X	X																				
+P01T2B2	Pork	n¡ã1	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P01T2B3	Pork	n¡ã1	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P01T2C1	Pork	n¡ã1	T2	Zero_dose	Air		X	X		X		X	X	X																			
+P01T2C2	Pork	n¡ã1	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P01T2C3	Pork	n¡ã1	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P01T3A1	Pork	n¡ã1	T3	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P01T3A2	Pork	n¡ã1	T3	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P01T3A3	Pork	n¡ã1	T3	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P01T3B1	Pork	n¡ã1	T3	Half_dose	Air	X	X			X		X	X																				
+P01T3B2	Pork	n¡ã1	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P01T3B3	Pork	n¡ã1	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P01T3C1	Pork	n¡ã1	T3	Zero_dose	Air	X	X	X		X		X	X	X																			
+P01T3C2	Pork	n¡ã1	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P01T3C3	Pork	n¡ã1	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P02TB	Pork	n¡ã2	Gut	None	None	X				X		X	X																				
+P02TD	Pork	n¡ã2	Primal_cut	None	None	X	X			X		X	X																				
+P02TE	Pork	n¡ã2	Spices	None	None		X			X		X	X																				
+P02TG	Pork	n¡ã2	Fat	None	None		X			X		X	X																				
+P02T0A	Pork	n¡ã2	T0	Normal_dose	None			X		X		X	X	X																			
+P02T0B	Pork	n¡ã2	T0	Half_dose	None		X			X		X	X																				
+P02T0C	Pork	n¡ã2	T0	Zero_dose	None			X		X		X	X																				
+P02T1A1	Pork	n¡ã2	T1	Normal_dose	Air		X	X		X		X	X	X																			
+P02T1A2	Pork	n¡ã2	T1	Normal_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P02T1A3	Pork	n¡ã2	T1	Normal_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P02T1B1	Pork	n¡ã2	T1	Half_dose	Air		X			X		X	X																				
+P02T1B2	Pork	n¡ã2	T1	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P02T1B3	Pork	n¡ã2	T1	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P02T1C1	Pork	n¡ã2	T1	Zero_dose	Air		X	X		X		X	X	X																			
+P02T1C2	Pork	n¡ã2	T1	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P02T1C3	Pork	n¡ã2	T1	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P02T2A1	Pork	n¡ã2	T2	Normal_dose	Air		X	X		X		X	X	X																			
+P02T2A2	Pork	n¡ã2	T2	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P02T2A3	Pork	n¡ã2	T2	Normal_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P02T2B1	Pork	n¡ã2	T2	Half_dose	Air	X	X			X		X	X																				
+P02T2B2	Pork	n¡ã2	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P02T2B3	Pork	n¡ã2	T2	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P02T2C1	Pork	n¡ã2	T2	Zero_dose	Air	X	X	X		X		X	X	X																			
+P02T2C2	Pork	n¡ã2	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P02T2C3	Pork	n¡ã2	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P02T3A1	Pork	n¡ã2	T3	Normal_dose	Air	X	X	X		X		X	X	X																			
+P02T3A2	Pork	n¡ã2	T3	Normal_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P02T3A3	Pork	n¡ã2	T3	Normal_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P02T3B1	Pork	n¡ã2	T3	Half_dose	Air	X	X			X		X	X																				
+P02T3B2	Pork	n¡ã2	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P02T3B3	Pork	n¡ã2	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P02T3C1	Pork	n¡ã2	T3	Zero_dose	Air	X	X	X		X		X	X	X																			
+P02T3C2	Pork	n¡ã2	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P02T3C3	Pork	n¡ã2	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P03TB	Pork	n¡ã3	Gut	None	None	X	X			X		X	X																				
+P03TD	Pork	n¡ã3	Primal_cut	None	None	X	X			X		X	X																				
+P03TE	Pork	n¡ã3	Spices	None	None	X	X			X		X	X																				
+P03TG	Pork	n¡ã3	Fat	None	None	X	X			X		X	X																				
+P03T0A	Pork	n¡ã3	T0	Normal_dose	None	X	X	X	X	X		X	X	X																			
+P03T0B	Pork	n¡ã3	T0	Half_dose	None		X			X		X	X																				
+P03T0C	Pork	n¡ã3	T0	Zero_dose	None		X	X		X		X	X																				
+P03T1A1	Pork	n¡ã3	T1	Normal_dose	Air		X	X	X	X		X	X	X																			
+P03T1A2	Pork	n¡ã3	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P03T1A3	Pork	n¡ã3	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P03T1B1	Pork	n¡ã3	T1	Half_dose	Air	X				X		X	X																				
+P03T1B2	Pork	n¡ã3	T1	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P03T1B3	Pork	n¡ã3	T1	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P03T1C1	Pork	n¡ã3	T1	Zero_dose	Air		X	X		X		X	X	X																			
+P03T1C2	Pork	n¡ã3	T1	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P03T1C3	Pork	n¡ã3	T1	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P03T2A1	Pork	n¡ã3	T2	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P03T2A2	Pork	n¡ã3	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P03T2A3	Pork	n¡ã3	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P03T2B1	Pork	n¡ã3	T2	Half_dose	Air	X	X			X		X	X																				
+P03T2B2	Pork	n¡ã3	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P03T2B3	Pork	n¡ã3	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P03T2C1	Pork	n¡ã3	T2	Zero_dose	Air	X	X	X		X		X	X	X																			
+P03T2C2	Pork	n¡ã3	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P03T2C3	Pork	n¡ã3	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P03T3A1	Pork	n¡ã3	T3	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P03T3A2	Pork	n¡ã3	T3	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P03T3A3	Pork	n¡ã3	T3	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P03T3B1	Pork	n¡ã3	T3	Half_dose	Air	X	X			X		X	X																				
+P03T3B2	Pork	n¡ã3	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P03T3B3	Pork	n¡ã3	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P03T3C1	Pork	n¡ã3	T3	Zero_dose	Air			X		X		X	X	X																			
+P03T3C2	Pork	n¡ã3	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P03T3C3	Pork	n¡ã3	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P04TB	Pork	n¡ã4	Gut	None	None	X	X			X		X	X																				
+P04TD	Pork	n¡ã4	Primal_cut	None	None	X	X			X		X	X																				
+P04TE	Pork	n¡ã4	Spices	None	None					X		X	X																				
+P04TG	Pork	n¡ã4	Fat	None	None		X			X		X	X																				
+P04T0A	Pork	n¡ã4	T0	Normal_dose	None		X	X	X	X		X	X	X																			
+P04T0B	Pork	n¡ã4	T0	Half_dose	None					X		X	X																				
+P04T0C	Pork	n¡ã4	T0	Zero_dose	None	X	X	X		X		X	X																				
+P04T1A1	Pork	n¡ã4	T1	Normal_dose	Air			X	X	X		X	X	X																			
+P04T1A2	Pork	n¡ã4	T1	Normal_dose	70%O2_30%CO2			X	X	X	x	X	X	X																			
+P04T1A3	Pork	n¡ã4	T1	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P04T1B1	Pork	n¡ã4	T1	Half_dose	Air		X			X		X	X																				
+P04T1B2	Pork	n¡ã4	T1	Half_dose	70%O2_30%CO2					X	x	X	X																				
+P04T1B3	Pork	n¡ã4	T1	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P04T1C1	Pork	n¡ã4	T1	Zero_dose	Air			X		X		X	X	X																			
+P04T1C2	Pork	n¡ã4	T1	Zero_dose	70%O2_30%CO2			X		X	x	X	X	X																			
+P04T1C3	Pork	n¡ã4	T1	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P04T2A1	Pork	n¡ã4	T2	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P04T2A2	Pork	n¡ã4	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P04T2A3	Pork	n¡ã4	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P04T2B1	Pork	n¡ã4	T2	Half_dose	Air	X	X			X		X	X																				
+P04T2B2	Pork	n¡ã4	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P04T2B3	Pork	n¡ã4	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P04T2C1	Pork	n¡ã4	T2	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+P04T2C2	Pork	n¡ã4	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P04T2C3	Pork	n¡ã4	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P04T3A1	Pork	n¡ã4	T3	Normal_dose	Air	X	X	X	X	X	x	X	X	X																			
+P04T3A2	Pork	n¡ã4	T3	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P04T3A3	Pork	n¡ã4	T3	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P04T3B1	Pork	n¡ã4	T3	Half_dose	Air	X	X			X	x	X	X																				
+P04T3B2	Pork	n¡ã4	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P04T3B3	Pork	n¡ã4	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P04T3C1	Pork	n¡ã4	T3	Zero_dose	Air	X	X	X		X	x	X	X	X																			
+P04T3C2	Pork	n¡ã4	T3	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P04T3C3	Pork	n¡ã4	T3	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P05TB	Pork	n¡ã5	Gut	None	None		X			X		X	X																				
+P05TD	Pork	n¡ã5	Primal_cut	None	None		X			X		X	X																				
+P05TE	Pork	n¡ã5	Spices	None	None					X		X	X																				
+P05TG	Pork	n¡ã5	Fat	None	None		X			X		X	X																				
+P05T0A	Pork	n¡ã5	T0	Normal_dose	None			X	X	X		X	X	X																			
+P05T0B	Pork	n¡ã5	T0	Half_dose	None					X		X	X																				
+P05T0C	Pork	n¡ã5	T0	Zero_dose	None		X	X		X		X	X																				
+P05T1A1	Pork	n¡ã5	T1	Normal_dose	Air		X	X	X	X		X	X	X																			
+P05T1A2	Pork	n¡ã5	T1	Normal_dose	70%O2_30%CO2		X	X	X	X	x	X	X	X																			
+P05T1A3	Pork	n¡ã5	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P05T1B1	Pork	n¡ã5	T1	Half_dose	Air	X	X			X		X	X																				
+P05T1B2	Pork	n¡ã5	T1	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P05T1B3	Pork	n¡ã5	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P05T1C1	Pork	n¡ã5	T1	Zero_dose	Air	X	X	X		X		X	X	X																			
+P05T1C2	Pork	n¡ã5	T1	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P05T1C3	Pork	n¡ã5	T1	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P05T2A1	Pork	n¡ã5	T2	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P05T2A2	Pork	n¡ã5	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P05T2A3	Pork	n¡ã5	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P05T2B1	Pork	n¡ã5	T2	Half_dose	Air	X	X			X		X	X																				
+P05T2B2	Pork	n¡ã5	T2	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P05T2B3	Pork	n¡ã5	T2	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P05T2C1	Pork	n¡ã5	T2	Zero_dose	Air	X	X	X		X		X	X	X																			
+P05T2C2	Pork	n¡ã5	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P05T2C3	Pork	n¡ã5	T2	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P05T3A1	Pork	n¡ã5	T3	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P05T3A2	Pork	n¡ã5	T3	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P05T3A3	Pork	n¡ã5	T3	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P05T3B1	Pork	n¡ã5	T3	Half_dose	Air	X	X			X		X	X																				
+P05T3B2	Pork	n¡ã5	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P05T3B3	Pork	n¡ã5	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P05T3C1	Pork	n¡ã5	T3	Zero_dose	Air	X	X	X		X		X	X	X																			
+P05T3C2	Pork	n¡ã5	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P05T3C3	Pork	n¡ã5	T3	Zero_dose	50%N2_50%CO2	X	X	X			x	X	X	X																			
+P06TB	Pork	n¡ã6	Gut	None	None	X	X					X	X																				
+P06TD	Pork	n¡ã6	Primal_cut	None	None		X					X	X																				
+P06TE	Pork	n¡ã6	Spices	None	None	X	X					X	X																				
+P06TG	Pork	n¡ã6	Fat	None	None		X					X	X																				
+P06T0A	Pork	n¡ã6	T0	Normal_dose	None		X	X	X	X		X	X	X																			
+P06T0B	Pork	n¡ã6	T0	Half_dose	None		X			X		X	X																				
+P06T0C	Pork	n¡ã6	T0	Zero_dose	None	X	X	X		X		X	X																				
+P06T1A1	Pork	n¡ã6	T1	Normal_dose	Air		X	X	X	X		X	X	X																			
+P06T1A2	Pork	n¡ã6	T1	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P06T1A3	Pork	n¡ã6	T1	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P06T1B1	Pork	n¡ã6	T1	Half_dose	Air	X	X			X		X	X																				
+P06T1B2	Pork	n¡ã6	T1	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P06T1B3	Pork	n¡ã6	T1	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P06T1C1	Pork	n¡ã6	T1	Zero_dose	Air	X	X	X		X		X	X	X																			
+P06T1C2	Pork	n¡ã6	T1	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P06T1C3	Pork	n¡ã6	T1	Zero_dose	50%N2_50%CO2	X	X	X		X	x	X	X	X																			
+P06T2A1	Pork	n¡ã6	T2	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P06T2A2	Pork	n¡ã6	T2	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P06T2A3	Pork	n¡ã6	T2	Normal_dose	50%N2_50%CO2	X	X	X	X	X	x	X	X	X																			
+P06T2B1	Pork	n¡ã6	T2	Half_dose	Air		X			X		X	X																				
+P06T2B2	Pork	n¡ã6	T2	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P06T2B3	Pork	n¡ã6	T2	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P06T2C1	Pork	n¡ã6	T2	Zero_dose	Air		X	X		X		X	X	X																			
+P06T2C2	Pork	n¡ã6	T2	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P06T2C3	Pork	n¡ã6	T2	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P06T3A1	Pork	n¡ã6	T3	Normal_dose	Air	X	X	X	X	X		X	X	X																			
+P06T3A2	Pork	n¡ã6	T3	Normal_dose	70%O2_30%CO2	X	X	X	X	X	x	X	X	X																			
+P06T3A3	Pork	n¡ã6	T3	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P06T3B1	Pork	n¡ã6	T3	Half_dose	Air		X			X		X	X																				
+P06T3B2	Pork	n¡ã6	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P06T3B3	Pork	n¡ã6	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P06T3C1	Pork	n¡ã6	T3	Zero_dose	Air	X	X	X		X		X	X	X																			
+P06T3C2	Pork	n¡ã6	T3	Zero_dose	70%O2_30%CO2	X	X	X		X	x	X	X	X																			
+P06T3C3	Pork	n¡ã6	T3	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P07TB	Pork	n¡ã7	Gut	None	None							X	X																				
+P07TD	Pork	n¡ã7	Primal_cut	None	None							X	X																				
+P07TE	Pork	n¡ã7	Spices	None	None							X	X																				
+P07TG	Pork	n¡ã7	Fat	None	None							X	X																				
+P07T0A	Pork	n¡ã7	T0	Normal_dose	None			X	X	X		X	X	X																			
+P07T0B	Pork	n¡ã7	T0	Half_dose	None					X		X	X																				
+P07T0C	Pork	n¡ã7	T0	Zero_dose	None			X		X		X	X																				
+P07T1A1	Pork	n¡ã7	T1	Normal_dose	Air			X	X	X		X	X	X																			
+P07T1A2	Pork	n¡ã7	T1	Normal_dose	70%O2_30%CO2			X	X	X	x	X	X	X																			
+P07T1A3	Pork	n¡ã7	T1	Normal_dose	50%N2_50%CO2			X	X	X	x	X	X	X																			
+P07T1B1	Pork	n¡ã7	T1	Half_dose	Air					X		X	X																				
+P07T1B2	Pork	n¡ã7	T1	Half_dose	70%O2_30%CO2					X	x	X	X																				
+P07T1B3	Pork	n¡ã7	T1	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P07T1C1	Pork	n¡ã7	T1	Zero_dose	Air			X		X		X	X	X																			
+P07T1C2	Pork	n¡ã7	T1	Zero_dose	70%O2_30%CO2			X		X	x	X	X	X																			
+P07T1C3	Pork	n¡ã7	T1	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P07T2A1	Pork	n¡ã7	T2	Normal_dose	Air			X	X	X		X	X	X																			
+P07T2A2	Pork	n¡ã7	T2	Normal_dose	70%O2_30%CO2			X	X	X	x	X	X	X																			
+P07T2A3	Pork	n¡ã7	T2	Normal_dose	50%N2_50%CO2			X	X	X	x	X	X	X																			
+P07T2B1	Pork	n¡ã7	T2	Half_dose	Air					X		X	X																				
+P07T2B2	Pork	n¡ã7	T2	Half_dose	70%O2_30%CO2					X	x	X	X																				
+P07T2B3	Pork	n¡ã7	T2	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P07T2C1	Pork	n¡ã7	T2	Zero_dose	Air			X		X		X	X	X																			
+P07T2C2	Pork	n¡ã7	T2	Zero_dose	70%O2_30%CO2			X		X	x	X	X	X																			
+P07T2C3	Pork	n¡ã7	T2	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P07T3A1	Pork	n¡ã7	T3	Normal_dose	Air			X	X	X		X	X	X																			
+P07T3A2	Pork	n¡ã7	T3	Normal_dose	70%O2_30%CO2			X	X	X	x	X	X	X																			
+P07T3A3	Pork	n¡ã7	T3	Normal_dose	50%N2_50%CO2			X	X	X	x	X	X	X																			
+P07T3B1	Pork	n¡ã7	T3	Half_dose	Air					X		X	X																				
+P07T3B2	Pork	n¡ã7	T3	Half_dose	70%O2_30%CO2					X	x	X	X																				
+P07T3B3	Pork	n¡ã7	T3	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P07T3C1	Pork	n¡ã7	T3	Zero_dose	Air			X		X		X	X	X																			
+P07T3C2	Pork	n¡ã7	T3	Zero_dose	70%O2_30%CO2			X		X	x	X	X	X																			
+P07T3C3	Pork	n¡ã7	T3	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P08TB	Pork	n¡ã8	Gut	None	None	X	X			X		X	X																				
+P08TD	Pork	n¡ã8	Primal_cut	None	None		X			X		X	X																				
+P08TE	Pork	n¡ã8	Spices	None	None	X	X			X		X	X																				
+P08TG	Pork	n¡ã8	Fat	None	None		X			X		X	X																				
+P08T0A	Pork	n¡ã8	T0	Normal_dose	None	X		X	X	X		X	X	X																			
+P08T0B	Pork	n¡ã8	T0	Half_dose	None					X		X	X																				
+P08T0C	Pork	n¡ã8	T0	Zero_dose	None			X		X		X	X																				
+P08T1A1	Pork	n¡ã8	T1	Normal_dose	Air			X	X	X		X	X	X																			
+P08T1A2	Pork	n¡ã8	T1	Normal_dose	70%O2_30%CO2			X	X	X	x	X	X	X																			
+P08T1A3	Pork	n¡ã8	T1	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P08T1B1	Pork	n¡ã8	T1	Half_dose	Air		X			X		X	X																				
+P08T1B2	Pork	n¡ã8	T1	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P08T1B3	Pork	n¡ã8	T1	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P08T1C1	Pork	n¡ã8	T1	Zero_dose	Air			X		X		X	X	X																			
+P08T1C2	Pork	n¡ã8	T1	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P08T1C3	Pork	n¡ã8	T1	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P08T2A1	Pork	n¡ã8	T2	Normal_dose	Air			X	X	X		X	X	X																			
+P08T2A2	Pork	n¡ã8	T2	Normal_dose	70%O2_30%CO2		X	X	X	X	x	X	X	X																			
+P08T2A3	Pork	n¡ã8	T2	Normal_dose	50%N2_50%CO2			X	X	X	x	X	X	X																			
+P08T2B1	Pork	n¡ã8	T2	Half_dose	Air		X			X		X	X																				
+P08T2B2	Pork	n¡ã8	T2	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P08T2B3	Pork	n¡ã8	T2	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P08T2C1	Pork	n¡ã8	T2	Zero_dose	Air		X	X		X		X	X	X																			
+P08T2C2	Pork	n¡ã8	T2	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P08T2C3	Pork	n¡ã8	T2	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P08T3A1	Pork	n¡ã8	T3	Normal_dose	Air		X	X	X	X		X	X	X																			
+P08T3A2	Pork	n¡ã8	T3	Normal_dose	70%O2_30%CO2		X	X	X	X	x	X	X	X																			
+P08T3A3	Pork	n¡ã8	T3	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P08T3B1	Pork	n¡ã8	T3	Half_dose	Air		X			X		X	X																				
+P08T3B2	Pork	n¡ã8	T3	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P08T3B3	Pork	n¡ã8	T3	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P08T3C1	Pork	n¡ã8	T3	Zero_dose	Air		X	X		X		X	X	X																			
+P08T3C2	Pork	n¡ã8	T3	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P08T3C3	Pork	n¡ã8	T3	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P09TB	Pork	n¡ã9	Gut	None	None							X	X																				
+P09TD	Pork	n¡ã9	Primal_cut	None	None							X	X																				
+P09TE	Pork	n¡ã9	Spices	None	None							X	X																				
+P09TG	Pork	n¡ã9	Fat	None	None							X	X																				
+P09T0A	Pork	n¡ã9	T0	Normal_dose	None		X	X	X	X		X	X	X																			
+P09T0B	Pork	n¡ã9	T0	Half_dose	None		X			X		X	X																				
+P09T0C	Pork	n¡ã9	T0	Zero_dose	None			X		X		X	X																				
+P09T1A1	Pork	n¡ã9	T1	Normal_dose	Air			X		X		X	X	X																			
+P09T1A2	Pork	n¡ã9	T1	Normal_dose	70%O2_30%CO2			X		X	x	X	X	X																			
+P09T1A3	Pork	n¡ã9	T1	Normal_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P09T1B1	Pork	n¡ã9	T1	Half_dose	Air					X		X	X																				
+P09T1B2	Pork	n¡ã9	T1	Half_dose	70%O2_30%CO2					X	x	X	X																				
+P09T1B3	Pork	n¡ã9	T1	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P09T1C1	Pork	n¡ã9	T1	Zero_dose	Air			X		X		X	X	X																			
+P09T1C2	Pork	n¡ã9	T1	Zero_dose	70%O2_30%CO2			X		X	x	X	X	X																			
+P09T1C3	Pork	n¡ã9	T1	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P09T2A1	Pork	n¡ã9	T2	Normal_dose	Air	X	X	X		X		X	X	X																			
+P09T2A2	Pork	n¡ã9	T2	Normal_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P09T2A3	Pork	n¡ã9	T2	Normal_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P09T2B1	Pork	n¡ã9	T2	Half_dose	Air		X			X		X	X																				
+P09T2B2	Pork	n¡ã9	T2	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P09T2B3	Pork	n¡ã9	T2	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P09T2C1	Pork	n¡ã9	T2	Zero_dose	Air		X	X		X		X	X	X																			
+P09T2C2	Pork	n¡ã9	T2	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P09T2C3	Pork	n¡ã9	T2	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P09T3A1	Pork	n¡ã9	T3	Normal_dose	Air		X	X		X		X	X	X																			
+P09T3A2	Pork	n¡ã9	T3	Normal_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P09T3A3	Pork	n¡ã9	T3	Normal_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P09T3B1	Pork	n¡ã9	T3	Half_dose	Air					X		X	X																				
+P09T3B2	Pork	n¡ã9	T3	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P09T3B3	Pork	n¡ã9	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P09T3C1	Pork	n¡ã9	T3	Zero_dose	Air	X	X	X		X		X	X	X																			
+P09T3C2	Pork	n¡ã9	T3	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P09T3C3	Pork	n¡ã9	T3	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P10TB	Pork	n¡ã10	Gut	None	None	X	X					X	X																				
+P10TD	Pork	n¡ã10	Primal_cut	None	None		X					X	X																				
+P10TE	Pork	n¡ã10	Spices	None	None	X	X					X	X																				
+P10TG	Pork	n¡ã10	Fat	None	None		X					X	X																				
+P10T0A	Pork	n¡ã10	T0	Normal_dose	None		X	X		X		X	X	X																			
+P10T0B	Pork	n¡ã10	T0	Half_dose	None		X			X		X	X																				
+P10T0C	Pork	n¡ã10	T0	Zero_dose	None			X		X		X	X																				
+P10T1A1	Pork	n¡ã10	T1	Normal_dose	Air		X	X	X	X		X	X	X																			
+P10T1A2	Pork	n¡ã10	T1	Normal_dose	70%O2_30%CO2		X	X	X	X	x	X	X	X																			
+P10T1A3	Pork	n¡ã10	T1	Normal_dose	50%N2_50%CO2			X	X	X	x	X	X	X																			
+P10T1B1	Pork	n¡ã10	T1	Half_dose	Air					X		X	X																				
+P10T1B2	Pork	n¡ã10	T1	Half_dose	70%O2_30%CO2					X	x	X	X																				
+P10T1B3	Pork	n¡ã10	T1	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P10T1C1	Pork	n¡ã10	T1	Zero_dose	Air			X		X		X	X	X																			
+P10T1C2	Pork	n¡ã10	T1	Zero_dose	70%O2_30%CO2			X		X	x	X	X	X																			
+P10T1C3	Pork	n¡ã10	T1	Zero_dose	50%N2_50%CO2			X		X	x	X	X	X																			
+P10T2A1	Pork	n¡ã10	T2	Normal_dose	Air		X	X	X	X		X	X	X																			
+P10T2A2	Pork	n¡ã10	T2	Normal_dose	70%O2_30%CO2		X	X	X	X	x	X	X	X																			
+P10T2A3	Pork	n¡ã10	T2	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P10T2B1	Pork	n¡ã10	T2	Half_dose	Air		X			X		X	X																				
+P10T2B2	Pork	n¡ã10	T2	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P10T2B3	Pork	n¡ã10	T2	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P10T2C1	Pork	n¡ã10	T2	Zero_dose	Air		X	X		X		X	X	X																			
+P10T2C2	Pork	n¡ã10	T2	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P10T2C3	Pork	n¡ã10	T2	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P10T3A1	Pork	n¡ã10	T3	Normal_dose	Air		X	X	X	X		X	X	X																			
+P10T3A2	Pork	n¡ã10	T3	Normal_dose	70%O2_30%CO2		X	X	X	X	x	X	X	X																			
+P10T3A3	Pork	n¡ã10	T3	Normal_dose	50%N2_50%CO2		X	X	X	X	x	X	X	X																			
+P10T3B1	Pork	n¡ã10	T3	Half_dose	Air		X			X		X	X																				
+P10T3B2	Pork	n¡ã10	T3	Half_dose	70%O2_30%CO2		X			X	x	X	X																				
+P10T3B3	Pork	n¡ã10	T3	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P10T3C1	Pork	n¡ã10	T3	Zero_dose	Air		X	X		X		X	X	X																			
+P10T3C2	Pork	n¡ã10	T3	Zero_dose	70%O2_30%CO2		X	X		X	x	X	X	X																			
+P10T3C3	Pork	n¡ã10	T3	Zero_dose	50%N2_50%CO2		X	X		X	x	X	X	X																			
+P11TB	Pork	n¡ã11	Spices	None	None		X					X	X																				
+P11TD	Pork	n¡ã11	Gut	None	None		X					X	X																				
+P11TE	Pork	n¡ã11	Fat	None	None		X					X	X																				
+P11TG	Pork	n¡ã11	T0	None	None		X					X	X																				
+P11T0A	Pork	n¡ã11	T0	Normal_dose	None					X		X	X																				
+P11T0B	Pork	n¡ã11	T0	Half_dose	None					X		X	X																				
+P11T0C	Pork	n¡ã11	T1	Zero_dose	None					X		X	X																				
+P11T1A1	Pork	n¡ã11	T1	Normal_dose	Air					X		X	X																				
+P11T1A2	Pork	n¡ã11	T1	Normal_dose	70%O2_30%CO2					X	x	X	X																				
+P11T1A3	Pork	n¡ã11	T1	Normal_dose	50%N2_50%CO2					X	x	X	X																				
+P11T1B1	Pork	n¡ã11	T1	Half_dose	Air					X		X	X																				
+P11T1B2	Pork	n¡ã11	T1	Half_dose	70%O2_30%CO2					X	x	X	X																				
+P11T1B3	Pork	n¡ã11	T1	Half_dose	50%N2_50%CO2					X	x	X	X																				
+P11T1C1	Pork	n¡ã11	T1	Zero_dose	Air					X		X	X																				
+P11T1C2	Pork	n¡ã11	T1	Zero_dose	70%O2_30%CO2		X			X	x	X	X																				
+P11T1C3	Pork	n¡ã11	T2	Zero_dose	50%N2_50%CO2					X	x	X	X																				
+P11T2A1	Pork	n¡ã11	T2	Normal_dose	Air	X	X			X		X	X																				
+P11T2A2	Pork	n¡ã11	T2	Normal_dose	70%O2_30%CO2					X	x	X	X																				
+P11T2A3	Pork	n¡ã11	T2	Normal_dose	50%N2_50%CO2		X			X	x	X	X																				
+P11T2B1	Pork	n¡ã11	T2	Half_dose	Air		X			X		X	X																				
+P11T2B2	Pork	n¡ã11	T2	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P11T2B3	Pork	n¡ã11	T2	Half_dose	50%N2_50%CO2		X			X	x	X	X																				
+P11T2C1	Pork	n¡ã11	T2	Zero_dose	Air		X			X		X	X																				
+P11T2C2	Pork	n¡ã11	T2	Zero_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P11T2C3	Pork	n¡ã11	T3	Zero_dose	50%N2_50%CO2		X			X	x	X	X																				
+P11T3A1	Pork	n¡ã11	T3	Normal_dose	Air	X	X			X		X	X																				
+P11T3A2	Pork	n¡ã11	T3	Normal_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P11T3A3	Pork	n¡ã11	T3	Normal_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P11T3B1	Pork	n¡ã11	T3	Half_dose	Air		X			X		X	X																				
+P11T3B2	Pork	n¡ã11	T3	Half_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P11T3B3	Pork	n¡ã11	T3	Half_dose	50%N2_50%CO2	X	X			X	x	X	X																				
+P11T3C1	Pork	n¡ã11	T3	Zero_dose	Air		X			X		X	X																				
+P11T3C2	Pork	n¡ã11	T3	Zero_dose	70%O2_30%CO2	X	X			X	x	X	X																				
+P11T3C3	Pork	n¡ã11	T3	Zero_dose	50%N2_50%CO2		X			X	x	X	X																				
