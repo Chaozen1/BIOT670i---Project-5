@@ -1,0 +1,73 @@
+# Requirements for SQL server 
+-Mysql server 9.4.0 windows
+-Mysql workbench community 8.0.28 windows
+-python 3.9
+
+#server setup
+-Hostname: 127.0.0.1 or localhost (since the server is likely on your own machine)
+
+-Port: 3306 (the default)
+
+-Username: root
+
+-Password: The root password you created during the server installation.
+
+# in my SQl workbench 
+run files in the scripts folder: 
+
+Updated_spoilage_SQL_script.sql
+Spoilage_data_inserts.sql 
+
+
+
+#Create configuration text file with your database connection information 
+[database]
+user = Team_user
+password = Biot670!
+host = localhost
+port = 3306
+database_name = mydb
+
+# connect to python 
+'''
+import pandas as pd
+from sqlalchemy import create_engine
+import configparser
+
+# --- Load Database Configuration ---
+config = configparser.ConfigParser()
+config.read('config.ini.template') # Read the configuration file
+
+db_user = config['database']['user']
+db_password = config['database']['password']
+db_host = config['database']['host']
+db_port = config['database']['port']
+db_name = config['database']['database_name']
+
+# --- Create Database Connection ---
+try:
+    connection_str = f'mysql+mysqlconnector://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
+    db_engine = create_engine(connection_str)
+    print("Successfully connected to the database!")
+except Exception as e:
+    print(f"Error connecting to database: {e}")
+    exit()
+
+# --- Your Analysis Code ---
+# The rest of your code works exactly the same
+sql_query = """
+SELECT
+    sd.Sample_Name,
+    sd.Meat_Type,
+    spoil.Spoilage_level 
+FROM
+    Sample_data AS sd
+LEFT JOIN
+    Spoilage_data AS spoil ON sd.Sample_Name = spoil.Sample_Name;
+"""
+
+df = pd.read_sql_query(sql_query, db_engine)
+
+print("Data successfully loaded into DataFrame:")
+print(df.head())
+'''
