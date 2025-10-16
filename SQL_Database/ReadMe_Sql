@@ -1,31 +1,45 @@
-# Requirements for SQL server 
--Mysql server 9.4.0 windows
--Mysql workbench community 8.0.28 windows
--python 3.9
+###🚀--- Database Setup ---
+Follow these instructions to set up the local database for this project.
 
-#server setup
--Hostname: 127.0.0.1 or localhost (since the server is likely on your own machine)
+Requirements
+Make sure you have the following installed on your Windows machine:
 
--Port: 3306 (the default)
+MySQL Server (v9.4.0)
 
--Username: root
+MySQL Workbench (v8.0.28)
 
--Password: The root password you created during the server installation.
+Python (v3.9)
 
-# in my SQl workbench 
-run files in the sql folder: 
+Database and Server Setup
+Connect to Server in MySQL Workbench:
+
+Hostname: 127.0.0.1 (or localhost)
+
+Port: 3306
+
+Username: root
+
+Password: Your root password from installation.
+
+Run SQL Scripts:
+
+Once connected, open and run the following files from the sql/ folder in order:
 
 Updated_spoilage_SQL_script.sql
+
 fix SRA inserts.sql
 
+Application Configuration
+To connect the application to the database, create a configuration file in the project's main directory (e.g., config.ini). Paste the following text into it( yours may be different depending on setup of your server):
 
-#Create configuration text file with your database connection information and  
 [database]
 user = Team_user
 password = Biot670!
 host = localhost
 port = 3306
 database_name = mydb
+
+### Python
 
 import pandas as pd
 from sqlalchemy import create_engine
