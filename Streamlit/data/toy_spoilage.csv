@@ -1,0 +1,9 @@
+Sample_Name_y,Day_numeric,Leuconostoc,Brochothrix,Acinetobacter,Pediococcus,Faecalibacterium,Total mesophilic aerobic flora (log10 CFU.g-1)
+Ground Beef,0,2.5,1,0.8,0.5,0.2,5.5
+Turkey,2,3,1.5,0.6,0.8,0.3,6.2
+Ham,4,3.5,2,0.4,1,0.2,6.8
+Chicken,6,4.5,2.5,0.3,1.5,0.1,7.2
+Milk,8,5,3,0.2,2,0.1,7.8
+Butter,10,5.5,3.5,0.1,2.5,0,8.3
+Roast Beef,12,6,4,0.1,3,0,8.7
+Pork,14,6.5,4.5,0,3.5,0,9.1
