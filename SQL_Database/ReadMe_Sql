@@ -13,13 +13,13 @@
 -Password: The root password you created during the server installation.
 
 # in my SQl workbench 
-run files in the scripts folder: 
+run files in the sql folder: 
 
 Updated_spoilage_SQL_script.sql
 fix SRA inserts.sql
 
 
-#Create configuration text file with your database connection information 
+#Create configuration text file with your database connection information and  
 [database]
 user = Team_user
 password = Biot670!
@@ -27,46 +27,164 @@ host = localhost
 port = 3306
 database_name = mydb
 
-# connect to python 
-'''
 import pandas as pd
 from sqlalchemy import create_engine
 import configparser
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score
 
-# --- Load Database Configuration ---
-config = configparser.ConfigParser()
-config.read('config.ini.template') # Read the configuration file
-
-db_user = config['database']['user']
-db_password = config['database']['password']
-db_host = config['database']['host']
-db_port = config['database']['port']
-db_name = config['database']['database_name']
-
-# --- Create Database Connection ---
+# --- 1. Database Connection & Data Loading (Your Method) ---
 try:
+    config = configparser.ConfigParser()
+    config.read('config.ini.template')  # Read the configuration file
+
+    db_user = config['database']['user']
+    db_password = config['database']['password']
+    db_host = config['database']['host']
+    db_port = config['database']['port']
+    db_name = config['database']['database_name']
+
     connection_str = f'mysql+mysqlconnector://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
     db_engine = create_engine(connection_str)
-    print("Successfully connected to the database!")
+
+    # The SQL query to join all tables
+    sql_query = """
+    SELECT
+        sd.Sample_Name, sd.Meat_Type, sd.Campaign, sd.Sampling_time,
+        sd.Lactate_Dose, sd.Packaging, sp.Ph, sca.Sample_CFU_aerobic,
+        scl.Sample_CFU_lactic, spoil.Spoilage_level, spoil.Etheral,
+        spoil.Fermented, spoil.Prickly, spoil.Rancid, spoil.Sulfurous
+    FROM
+        Sample_data sd
+    LEFT JOIN Sample_Ph sp ON sd.Sample_Name = sp.Sample_Name
+    LEFT JOIN Sample_CFU_aerobic sca ON sd.Sample_Name = sca.`Sample data_Sample_Name`
+    LEFT JOIN Sample_CFU_lactic scl ON sd.Sample_Name = scl.`Sample data_Sample_Name`
+    LEFT JOIN Spoilage_data spoil ON sd.Sample_Name = spoil.Sample_Name;
+    """
+
+    # Load data directly into a pandas DataFrame using the sqlalchemy engine
+    df = pd.read_sql_query(sql_query, db_engine)
+    print("✅ Data loaded successfully using SQLAlchemy!")
+    print(df.head())
+
 except Exception as e:
-    print(f"Error connecting to database: {e}")
+    print(f"Error connecting to database or fetching data: {e}")
     exit()
 
-# --- Your Analysis Code ---
-# The rest of your code works exactly the same
-sql_query = """
-SELECT
-    sd.Sample_Name,
-    sd.Meat_Type,
-    spoil.Spoilage_level 
-FROM
-    Sample_data AS sd
-LEFT JOIN
-    Spoilage_data AS spoil ON sd.Sample_Name = spoil.Sample_Name;
-"""
+# --- 2. Data Preprocessing ---
+# Drop rows where our target variable 'Spoilage_level' is missing
+df = df.dropna(subset=['Spoilage_level'])
 
-df = pd.read_sql_query(sql_query, db_engine)
+# Define features (X) and target (y)
+X = df.drop(columns=['Spoilage_level', 'Sample_Name'])
+y = df['Spoilage_level']
 
-print("Data successfully loaded into DataFrame:")
-print(df.head())
-'''
+# Identify categorical and numerical feature names
+categorical_features = X.select_dtypes(include=['object']).columns
+numerical_features = X.select_dtypes(include=['number']).columns
+
+print(f"\nCategorical features: {list(categorical_features)}")
+print(f"Numerical features: {list(numerical_features)}")
+
+# --- 3. Building the Scikit-learn Pipeline --- 🤖
+preprocessor = ColumnTransformer(
+    transformers=[
+        ('num', StandardScaler(), numerical_features),
+        ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_features)
+    ])
+
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+
+ml_pipeline = Pipeline(steps=[
+    ('preprocessor', preprocessor),
+    ('regressor', model)
+])
+
+# --- 4. Training and Evaluation --- 📊
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+print("\n🚀 Training the machine learning pipeline...")
+ml_pipeline.fit(X_train, y_train)
+print("✅ Training complete!")
+
+y_pred = ml_pipeline.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print(f"\n--- Model Evaluation ---")
+print(f"Mean Squared Error (MSE): {mse:.4f}")
+print(f"R-squared (R²): {r2:.4f}")
+
+#visualize feature importance ( install matplotlibin python env)
+import matplotlib.pyplot as plt
+
+# --- 5. Feature Importance ---
+print("\n--- Feature Importance ---")
+
+# Extract the trained model and preprocessor from the pipeline
+model = ml_pipeline.named_steps['regressor']
+preprocessor = ml_pipeline.named_steps['preprocessor']
+
+# Get the feature names from the preprocessor
+# This is a bit complex because of the one-hot encoding
+cat_features = preprocessor.named_transformers_['cat'].get_feature_names_out(categorical_features)
+all_feature_names = list(numerical_features) + list(cat_features)
+
+# Create a pandas series for easy plotting
+importances = pd.Series(model.feature_importances_, index=all_feature_names)
+
+# Sort the features by importance
+sorted_importances = importances.sort_values(ascending=True)
+
+# Plot the feature importances
+plt.figure(figsize=(10, 8))
+sorted_importances.plot(kind='barh', color='skyblue')
+plt.title('Feature Importance for Predicting Meat Spoilage')
+plt.xlabel('Importance Score')
+plt.ylabel('Feature')
+plt.tight_layout() # Adjust layout to make room for labels
+plt.show()
+
+
+# --- 6. Make Predictions on New, Hypothetical Data ---
+def predict_spoilage(new_data, pipeline):
+    """
+    Takes a DataFrame of new samples and predicts spoilage using the trained pipeline.
+    """
+    # Create a DataFrame from the input data
+    new_df = pd.DataFrame(new_data)
+
+    # Use the trained pipeline to predict
+    predictions = pipeline.predict(new_df)
+
+    # Add predictions to the DataFrame and return it
+    new_df['Predicted_Spoilage_Level'] = predictions
+    return new_df
+
+
+# Create some hypothetical new samples
+hypothetical_samples = {
+    'Meat_Type': ['Poultry', 'Beef'],
+    'Campaign': ['n°1', 'n°2'],
+    'Sampling_time': ['T3', 'T5'],  # T3 = earlier, T5 = later
+    'Lactate_Dose': ['0%', '2%'],
+    'Packaging': ['MAP', 'VSP'],
+    'Ph': [6.0, 5.5],
+    'Sample_CFU_aerobic': [1e5, 1e8],  # 100,000 vs 100,000,000
+    'Sample_CFU_lactic': [1e4, 1e7],
+    'Etheral': [0.5, 3.0],
+    'Fermented': [0.2, 4.5],
+    'Prickly': [0.1, 1.5],
+    'Rancid': [0.3, 5.0],
+    'Sulfurous': [0.4, 6.0]
+}
+
+# Get predictions for the new samples
+predicted_results = predict_spoilage(hypothetical_samples, ml_pipeline)
+
+print("\n--- Predictions on New Hypothetical Samples ---")
+print(predicted_results)
