@@ -16,8 +16,7 @@
 run files in the scripts folder: 
 
 Updated_spoilage_SQL_script.sql
-Spoilage_data_inserts.sql 
-
+fix SRA inserts.sql
 
 
 #Create configuration text file with your database connection information 
