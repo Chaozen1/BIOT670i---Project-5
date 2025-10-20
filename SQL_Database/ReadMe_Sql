@@ -1,4 +1,4 @@
-###🚀--- Database Setup ---
+###--- Database Setup ---
 Follow these instructions to set up the local database for this project.
 
 Requirements
@@ -82,7 +82,7 @@ try:
 
     # Load data directly into a pandas DataFrame using the sqlalchemy engine
     df = pd.read_sql_query(sql_query, db_engine)
-    print("✅ Data loaded successfully using SQLAlchemy!")
+    print(" Data loaded successfully using SQLAlchemy!")
     print(df.head())
 
 except Exception as e:
@@ -121,9 +121,9 @@ ml_pipeline = Pipeline(steps=[
 # --- 4. Training and Evaluation --- 📊
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-print("\n🚀 Training the machine learning pipeline...")
+print("\n Training the machine learning pipeline...")
 ml_pipeline.fit(X_train, y_train)
-print("✅ Training complete!")
+print("Training complete!")
 
 y_pred = ml_pipeline.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
