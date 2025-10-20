@@ -113,12 +113,12 @@ DROP TABLE IF EXISTS `mydb`.`Spoilage_data` ;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Spoilage_data` (
   `Sample_Name` VARCHAR(45) NOT NULL,
-  `Spoilage_level` DECIMAL(3) NULL,
-  `Etheral` DECIMAL(3) NULL,
-  `Fermented` DECIMAL(3) NULL,
-  `Prickly` DECIMAL(3) NULL,
-  `Rancid` DECIMAL(3) NULL,
-  `Sulfurous` DECIMAL(3) NULL,
+  `Spoilage_level` DECIMAL(8, 4) NULL,
+  `Etheral` DECIMAL(8, 4) NULL,
+  `Fermented` DECIMAL(8, 4) NULL,
+  `Prickly` DECIMAL(8, 4) NULL,
+  `Rancid` DECIMAL(8, 4) NULL,
+  `Sulfurous` DECIMAL(8, 4) NULL,
   `Old_cheese` VARCHAR(45) NULL,
   CONSTRAINT `fk_Spoilage_data_Sample_data1`
     FOREIGN KEY (`Sample_Name`)
