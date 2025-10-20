@@ -104,7 +104,7 @@ numerical_features = X.select_dtypes(include=['number']).columns
 print(f"\nCategorical features: {list(categorical_features)}")
 print(f"Numerical features: {list(numerical_features)}")
 
-# --- 3. Building the Scikit-learn Pipeline --- 🤖
+# --- 3. Building the Scikit-learn Pipeline --- 
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', StandardScaler(), numerical_features),
@@ -118,7 +118,7 @@ ml_pipeline = Pipeline(steps=[
     ('regressor', model)
 ])
 
-# --- 4. Training and Evaluation --- 📊
+# --- 4. Training and Evaluation --- 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 print("\n Training the machine learning pipeline...")
