@@ -1,0 +1,20 @@
+Model: L1-LogisticRegressionCV
+Target-from: 'Total mesophilic aerobic flora (log10 CFU.g-1)' (>=7 => early)
+Best C: 21.54434690031882
+Class weight: balanced
+Threshold: 0.50
+Accuracy (test): 0.890
+ROC AUC (test): 0.940
+
+Confusion matrix (rows=true, cols=pred) [0,1]:
+[[13  2]
+ [10 84]]
+
+              precision    recall  f1-score   support
+
+           0      0.565     0.867     0.684        15
+           1      0.977     0.894     0.933        94
+
+    accuracy                          0.890       109
+   macro avg      0.771     0.880     0.809       109
+weighted avg      0.920     0.890     0.899       109
