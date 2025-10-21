@@ -1,0 +1,455 @@
+#!/usr/bin/env python3
+import pandas as pd
+from sqlalchemy import create_engine
+import configparser
+import sys
+import numpy as np
+import pathlib
+import matplotlib
+
+matplotlib.use("Agg")  # Use 'Agg' for saving files without showing plot
+import matplotlib.pyplot as plt
+
+# --- Imports for Regression (Original Pipeline) ---
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score
+
+# --- Imports for Classification (New Pipeline) ---
+from sklearn.linear_model import LogisticRegressionCV, LassoCV
+from sklearn.metrics import (
+    accuracy_score, roc_auc_score, classification_report,
+    confusion_matrix, precision_recall_fscore_support, RocCurveDisplay
+)
+
+
+# ==============================================================================
+# 1. DATABASE CONNECTION
+# ==============================================================================
+
+def load_data_from_db():
+    """Connects to MySQL and returns the joined DataFrame."""
+    try:
+        config = configparser.ConfigParser()
+        config.read('config.ini.template')
+
+        db_user = config['database']['user']
+        db_password = config['database']['password']
+        db_host = config['database']['host']
+        db_port = config['database']['port']
+        db_name = config['database']['database_name']
+
+        connection_str = f'mysql+mysqlconnector://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
+        db_engine = create_engine(connection_str)
+
+        sql_query = """
+        SELECT
+            sd.Sample_Name, sd.Meat_Type, sd.Campaign, sd.Sampling_time,
+            sd.Lactate_Dose, sd.Packaging, sp.Ph, sca.Sample_CFU_aerobic,
+            scl.Sample_CFU_lactic, spoil.Spoilage_level, spoil.Etheral,
+            spoil.Fermented, spoil.Prickly, spoil.Rancid, spoil.Sulfurous
+        FROM
+            Sample_data sd
+        LEFT JOIN Sample_Ph sp ON sd.Sample_Name = sp.Sample_Name
+        LEFT JOIN Sample_CFU_aerobic sca ON sd.Sample_Name = sca.`Sample data_Sample_Name`
+        LEFT JOIN Sample_CFU_lactic scl ON sd.Sample_Name = scl.`Sample data_Sample_Name`
+        LEFT JOIN Spoilage_data spoil ON sd.Sample_Name = spoil.Sample_Name;
+        """
+
+        df = pd.read_sql_query(sql_query, db_engine)
+        print("✅ Data loaded successfully using SQLAlchemy!")
+        print(df.head())
+        return df
+
+    except Exception as e:
+        print(f"Error connecting to database or fetching data: {e}")
+        sys.exit(1)
+
+
+# ==============================================================================
+# 2. ANALYSIS 1: REGRESSION (Your Original Pipeline)
+# ==============================================================================
+
+def run_regression_pipeline(df_original):
+    """
+    Runs the RandomForestRegressor pipeline to predict continuous Spoilage_level.
+    """
+    print("\n" + "=" * 50)
+    print("🚀 RUNNING ANALYSIS 1: REGRESSION (Predicting Spoilage_level)")
+    print("=" * 50 + "\n")
+
+    # --- 2.1. Regression Preprocessing ---
+    df = df_original.copy()  # Avoid modifying the original df
+    df = df.dropna(subset=['Spoilage_level'])
+
+    X = df.drop(columns=['Spoilage_level', 'Sample_Name'])
+    y = df['Spoilage_level']
+
+    categorical_features = X.select_dtypes(include=['object']).columns
+    numerical_features = X.select_dtypes(include=['number']).columns
+
+    print(f"Categorical features: {list(categorical_features)}")
+    print(f"Numerical features: {list(numerical_features)}")
+
+    # --- 2.2. Regression Pipeline Building ---
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ('num', StandardScaler(), numerical_features),
+            ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_features)
+        ])
+
+    model = RandomForestRegressor(n_estimators=100, random_state=42)
+
+    ml_pipeline = Pipeline(steps=[
+        ('preprocessor', preprocessor),
+        ('regressor', model)
+    ])
+
+    # --- 2.3. Regression Training and Evaluation ---
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    print("\n🚀 Training the regression pipeline...")
+    ml_pipeline.fit(X_train, y_train)
+    print("✅ Regression training complete!")
+
+    y_pred = ml_pipeline.predict(X_test)
+    mse = mean_squared_error(y_test, y_pred)
+    r2 = r2_score(y_test, y_pred)
+
+    print(f"\n--- Regression Model Evaluation ---")
+    print(f"Mean Squared Error (MSE): {mse:.4f}")
+    print(f"R-squared (R²): {r2:.4f}")
+
+    # --- 2.4. Regression Feature Importance ---
+    # Note: We must change plt.show() to plt.savefig() to avoid blocking
+    try:
+        print("\n--- Regression Feature Importance ---")
+
+        reg_model = ml_pipeline.named_steps['regressor']
+        reg_preprocessor = ml_pipeline.named_steps['preprocessor']
+
+        cat_features = reg_preprocessor.named_transformers_['cat'].get_feature_names_out(categorical_features)
+        all_feature_names = list(numerical_features) + list(cat_features)
+
+        importances = pd.Series(reg_model.feature_importances_, index=all_feature_names)
+        sorted_importances = importances.sort_values(ascending=True)
+
+        plt.figure(figsize=(10, 8))
+        sorted_importances.plot(kind='barh', color='skyblue')
+        plt.title('Feature Importance (Regression Model)')
+        plt.xlabel('Importance Score')
+        plt.ylabel('Feature')
+        plt.tight_layout()
+        plt.savefig("regression_feature_importance.png")  # Save plot to file
+        plt.close()  # Close the plot figure
+        print("✅ Regression feature importance plot saved to 'regression_feature_importance.png'")
+
+    except Exception as e:
+        print(f"Could not generate feature importance plot: {e}")
+
+    # --- 2.5. Regression Predictions ---
+    # (This function is unchanged, but we call it)
+    def predict_spoilage_regression(new_data, pipeline):
+        new_df = pd.DataFrame(new_data)
+        predictions = pipeline.predict(new_df)
+        new_df['Predicted_Spoilage_Level'] = predictions
+        return new_df
+
+    hypothetical_samples = {
+        'Meat_Type': ['Poultry', 'Beef'], 'Campaign': ['n°1', 'n°2'],
+        'Sampling_time': ['T3', 'T5'], 'Lactate_Dose': ['0%', '2%'],
+        'Packaging': ['MAP', 'VSP'], 'Ph': [6.0, 5.5],
+        'Sample_CFU_aerobic': [1e5, 1e8], 'Sample_CFU_lactic': [1e4, 1e7],
+        'Etheral': [0.5, 3.0], 'Fermented': [0.2, 4.5], 'Prickly': [0.1, 1.5],
+        'Rancid': [0.3, 5.0], 'Sulfurous': [0.4, 6.0]
+    }
+
+    predicted_results = predict_spoilage_regression(hypothetical_samples, ml_pipeline)
+    print("\n--- Predictions from Regression Model ---")
+    print(predicted_results)
+    print("\n✅ ANALYSIS 1 (REGRESSION) COMPLETE.")
+
+
+# ==============================================================================
+# 3. ANALYSIS 2: CLASSIFICATION (New Script's Logic)
+# ==============================================================================
+
+# --- 3.1. Helper Constants for Classification ---
+# !! CRITICAL !! I am assuming 'Sample_CFU_aerobic' is your target column.
+# If it's a different one, change this value.
+TARGET_SUBSTR = "sample_cfu_aerobic"
+
+# Columns to auto-drop
+DEFAULT_DROP_CANDIDATES = {
+    "sample_name"  # Simplified from the new script to match your schema
+}
+# Patterns to drop if --microbe_only is used
+MICROBE_ONLY_DROP_PATTERNS = ["day_numeric", "day", "time", "sampling_time"]
+
+
+# --- 3.2. Helper Functions for Classification ---
+def find_target_column(cols):
+    lc = {c: str(c).lower() for c in cols}
+    matches = [orig for orig, low in lc.items() if TARGET_SUBSTR in low]
+    if not matches:
+        raise ValueError(
+            f"Could not find a column containing '{TARGET_SUBSTR}'. "
+            f"Columns seen: {list(cols)[:12]}"
+        )
+    return matches[0]
+
+
+def prepare_classification_data(df_original, drop_ids=True, microbe_only=False):
+    """
+    Prepares data for the classification task.
+    Takes a DataFrame, not a CSV path.
+    """
+    df = df_original.copy()
+    target_col = find_target_column(df.columns)
+
+    # build label: >=7 -> 1 (early), else 0 (late)
+    y = (df[target_col] >= 7).astype(int)
+
+    # drop label-source col to prevent leakage
+    X = df.drop(columns=[target_col], errors="ignore")
+
+    # optionally drop obvious non-feature columns
+    if drop_ids:
+        to_drop = [c for c in X.columns if str(c).lower() in DEFAULT_DROP_CANDIDATES]
+        if to_drop:
+            X = X.drop(columns=to_drop, errors="ignore")
+
+    # optionally drop time/day cols
+    if microbe_only:
+        for pattern in MICROBE_ONLY_DROP_PATTERNS:
+            tod = [c for c in X.columns if str(c).lower() == pattern]
+            if tod:
+                X = X.drop(columns=tod, errors="ignore")
+
+    # --- CRITICAL: This model ONLY uses numeric features ---
+    X = X.select_dtypes(include=np.number)
+
+    # drop rows with NaNs
+    keep = (~X.isna().any(axis=1)) & (~y.isna())
+    X = X.loc[keep]
+    y = y.loc[keep]
+
+    return X, y, target_col
+
+
+def fit_logit(X, y, class_weight=None, random_state=100):
+    pipe = Pipeline(
+        steps=[
+            ("scaler", StandardScaler()),
+            ("clf", LogisticRegressionCV(
+                Cs=10, cv=10, penalty="l1", solver="saga",
+                scoring="roc_auc", max_iter=5000, refit=True,
+                random_state=random_state, class_weight=class_weight
+            ))
+        ]
+    )
+    pipe.fit(X, y)
+    clf = pipe.named_steps["clf"]
+    return pipe, clf.coef_.ravel(), clf.intercept_[0], clf.C_[0]
+
+
+def fit_lasso(X, y, random_state=100):
+    pipe = Pipeline(
+        steps=[
+            ("scaler", StandardScaler()),
+            ("reg", LassoCV(cv=10, random_state=random_state, max_iter=5000))
+        ]
+    )
+    pipe.fit(X, y)
+    reg = pipe.named_steps["reg"]
+    return pipe, reg.coef_, reg.intercept_, reg.alpha_
+
+
+def threshold_sweep_df(y_true, y_prob, thresholds):
+    rows = []
+    for t in thresholds:
+        y_pred = (y_prob >= t).astype(int)
+        acc = accuracy_score(y_true, y_pred)
+        p, r, f1, _ = precision_recall_fscore_support(
+            y_true, y_pred, average=None, labels=[0, 1], zero_division=0
+        )
+        rows.append({
+            "threshold": float(t), "accuracy": float(acc),
+            "precision_0": float(p[0]), "recall_0": float(r[0]), "f1_0": float(f1[0]),
+            "precision_1": float(p[1]), "recall_1": float(r[1]), "f1_1": float(f1[1]),
+        })
+    return pd.DataFrame(rows)
+
+
+def save_coef_artifacts(outdir, coef_df, topn):
+    # full coefficients
+    coef_df.to_csv(outdir / "coefficients_logit.csv", index=False)
+    if topn and topn > 0:
+        # make topN with odds ratios & plots
+        top = coef_df.copy()
+        top["abs_coef"] = top["Coefficient"].abs()
+        top = top.sort_values("abs_coef", ascending=False).head(topn).drop(columns="abs_coef")
+        top["odds_ratio_per_SD"] = np.exp(top["Coefficient"])
+        top.to_csv(outdir / f"top{topn}_coeffs_with_OR.csv", index=False)
+
+        # coef plot (signed)
+        order = top.sort_values("Coefficient")
+        plt.figure(figsize=(8, 0.35 * len(order) + 3))
+        plt.barh(order["Feature"], order["Coefficient"])
+        plt.xlabel("L1 Logistic Regression Coefficient (per 1 SD)")
+        plt.ylabel("Feature")
+        plt.title(f"Top {topn} Features by |Coefficient| — Early vs Late Spoilage")
+        plt.tight_layout()
+        plt.savefig(outdir / f"top{topn}_coeffs_bar.png", dpi=180)
+        plt.close()
+
+        # odds ratio plot (color by sign)
+        order = top.sort_values("odds_ratio_per_SD")
+        colors = ["#1f77b4" if c > 0 else "#d62728" for c in order["Coefficient"]]
+        plt.figure(figsize=(8, 0.35 * len(order) + 3))
+        plt.barh(order["Feature"], order["odds_ratio_per_SD"], color=colors)
+        plt.axvline(1.0, color="black", linestyle="--")
+        plt.xlabel("Odds Ratio (per 1 SD increase)")
+        plt.ylabel("Feature")
+        plt.title(f"Top {topn} Odds Ratios — Early vs Late Spoilage")
+        plt.tight_layout()
+        plt.savefig(outdir / f"top{topn}_odds_ratios.png", dpi=180)
+        plt.close()
+
+
+def save_roc(y_true, y_prob, auc, outpath_png):
+    fig, ax = plt.subplots()
+    RocCurveDisplay.from_predictions(y_true, y_prob, ax=ax, name=f"Logit (AUC={auc:.3f})")
+    ax.set_title("ROC — Early vs Late Spoilage")
+    fig.tight_layout()
+    fig.savefig(outpath_png, dpi=180)
+    plt.close(fig)
+
+
+# --- 3.3. Main Function for Classification ---
+def run_classification_pipeline(df_original):
+    """
+    Runs the classification pipeline (from new script)
+    to predict early/late spoilage.
+    """
+    print("\n" + "=" * 50)
+    print("🚀 RUNNING ANALYSIS 2: CLASSIFICATION (Predicting Early/Late)")
+    print("=" * 50 + "\n")
+
+    # --- Settings (replaces argparse) ---
+    outdir_path = "results_classification"
+    model_type = "logit"  # or "lasso"
+    test_size = 0.25
+    random_state = 100
+    microbe_only = False  # Set to True to drop 'Sampling_time'
+    balanced = False  # Set to True to use class_weight="balanced"
+    threshold = 0.50
+    topn = 20
+    # -------------------------------------
+
+    outdir = pathlib.Path(outdir_path)
+    outdir.mkdir(parents=True, exist_ok=True)
+    print(f"Classification results will be saved to: ./{outdir_path}/")
+
+    X, y, target_col = prepare_classification_data(
+        df_original, drop_ids=True, microbe_only=microbe_only
+    )
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=test_size, random_state=random_state,
+        shuffle=True, stratify=y
+    )
+
+    print(f"Classification features used: {list(X.columns)}")
+
+    if model_type == "logit":
+        class_weight = "balanced" if balanced else None
+        pipe, coefs, intercept, best_C = fit_logit(
+            X_train, y_train, class_weight=class_weight, random_state=random_state
+        )
+        y_prob = pipe.predict_proba(X_test)[:, 1]
+        cutoff = float(threshold)
+        y_pred = (y_prob >= cutoff).astype(int)
+
+        acc = accuracy_score(y_test, y_pred)
+        auc = roc_auc_score(y_test, y_prob)
+        cm = confusion_matrix(y_test, y_pred, labels=[0, 1])
+
+        # sweep
+        ts = np.round(np.linspace(0.10, 0.90, 17), 2)
+        sweep_df = threshold_sweep_df(y_test, y_prob, ts)
+        sweep_df.to_csv(outdir / "threshold_sweep.csv", index=False)
+
+        # roc
+        save_roc(y_test, y_prob, auc, outdir / "roc_curve.png")
+
+        # coefficients & topN
+        coef_df = pd.DataFrame({"Feature": X.columns, "Coefficient": coefs})
+        save_coef_artifacts(outdir, coef_df, topn)
+
+        # confusion matrix + metrics
+        np.savetxt(outdir / "confusion_matrix.txt", cm, fmt="%d")
+        metrics_text = (
+                f"Model: L1-LogisticRegressionCV\n"
+                f"Target-from: '{target_col}' (>=7 => early)\n"
+                f"Best C: {best_C}\n"
+                f"Class weight: {'balanced' if class_weight else 'None'}\n"
+                f"Threshold: {cutoff:.2f}\n"
+                f"Accuracy (test): {acc:.3f}\n"
+                f"ROC AUC (test): {auc:.3f}\n\n"
+                f"Confusion matrix (rows=true, cols=pred) [0,1]:\n{cm}\n\n"
+                + classification_report(y_test, y_pred, digits=3)
+        )
+        (outdir / "metrics.txt").write_text(metrics_text)
+        print(metrics_text)
+
+    else:  # lasso
+        pipe, coefs, intercept, alpha = fit_lasso(X_train, y_train, random_state=random_state)
+        y_pred_cont = pipe.predict(X_test)
+        r2 = r2_score(y_test, y_pred_cont)
+
+        coef_df = pd.DataFrame({"Feature": X.columns, "Coefficient": coefs})
+        coef_df.to_csv(outdir / "coefficients_lasso.csv", index=False)
+
+        metrics_text = (
+            f"Model: LassoCV (regression on 0/1 label)\n"
+            f"Target-from: '{target_col}' (>=7 => early)\n"
+            f"Optimal alpha: {alpha}\n"
+            f"R^2 (test): {r2:.3f}\n"
+        )
+        (outdir / "metrics.txt").write_text(metrics_text)
+        print(metrics_text)
+
+    # feature list
+    pd.Series(X.columns, name="feature").to_csv(outdir / "features_used.csv", index=False)
+    print("\n✅ ANALYSIS 2 (CLASSIFICATION) COMPLETE.")
+
+
+# ==============================================================================
+# 4. MAIN EXECUTION
+# ==============================================================================
+
+def main():
+    """
+    Main function to load data and run both analysis pipelines.
+    """
+    try:
+        # Load the data once
+        master_dataframe = load_data_from_db()
+
+        # Run the first analysis
+        run_regression_pipeline(master_dataframe)
+
+        # Run the second analysis
+        run_classification_pipeline(master_dataframe)
+
+    except Exception as e:
+        sys.stderr.write(f"\n[FATAL ERROR] {e}\n")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
