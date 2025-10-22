@@ -17,50 +17,53 @@ type_map = {'pork': 0, 'poultry': 1}
 spoilage_data['meat_type'] = spoilage_data['EnvType'].map(type_map)
 
 
-# Drop columns that contain nan values
-spoilage_data = spoilage_data.dropna(axis=1)
-
 # Select Columns that are numeric
 num_spoilage_data = spoilage_data.select_dtypes(include=np.number)
 
-num_spoilage_data['earlyvlatespoilage'] = (num_spoilage_data['Total mesophilic aerobic flora (log10 CFU.g-1)'] >= 7).astype(int)
+# This ensures we don't lose rows or other columns unnecessarily
+num_spoilage_data = num_spoilage_data.dropna(
+    subset=['Total mesophilic aerobic flora (log10 CFU.g-1)']
+)
 
-# print(num_spoilage_data[['Total mesophilic aerobic flora (log10 CFU.g-1)', 'earlyvlatespoilage']])
+num_spoilage_data['earlyvlatespoilage'] = (
+    num_spoilage_data['Total mesophilic aerobic flora (log10 CFU.g-1)'] >= 7
+).astype(int)
 
-X = num_spoilage_data.drop(['earlyvlatespoilage', 'Total mesophilic aerobic flora (log10 CFU.g-1)'], axis=1)
+# Create X and Y from the processed numeric data
 Y = num_spoilage_data['earlyvlatespoilage']
+X = num_spoilage_data.drop(
+    ['earlyvlatespoilage', 'Total mesophilic aerobic flora (log10 CFU.g-1)'], 
+    axis=1
+)
 
-# --- START OF NEW/CHANGED SECTION ---
-
-# <<< CHANGED: Split data into 75% Train and 25% Validation >>>
-# We use stratify=Y to ensure both sets have the same ratio of safe/not-safe
-X_train, X_val, Y_train, Y_val = train_test_split(
-    X, Y, 
+# We'll use these indices to partition all our data.
+train_indices, val_indices = train_test_split(
+    X.index,  # Split the index
     test_size=0.25, 
     random_state=100, 
     shuffle=True, 
-    stratify=Y
+    stratify=Y   # Stratify based on the target
 )
 
-print(f"Total samples: {len(X)}")
+# Create the 75% training sets for the model
+X_train, Y_train = X.loc[train_indices], Y.loc[train_indices]
+
+
+validation_data_full = spoilage_data.loc[val_indices]
+validation_data_full.to_csv("validation_dataset_25.csv", index=False)
+
+
+
+print(f"Total samples processed: {len(X)}")
 print(f"Training samples (75%): {len(X_train)}")
-print(f"Validation samples (25%): {len(X_val)}")
-
-# <<< NEW: Save the 25% validation set to a CSV file >>>
-# Combine X_val and Y_val to save as a single file
-validation_data = X_val.copy()
-validation_data[Y_val.name] = Y_val # Y_val.name is 'earlyvlatespoilage'
-validation_data.to_csv("validation_dataset_25.csv", index=False)
-print(f"\nSuccessfully saved {len(validation_data)} validation samples to validation_dataset_25.csv")
-
-# --- END OF NEW/CHANGED SECTION ---
+print(f"Validation samples (25%): {len(val_indices)}")
+print(f"\nSuccessfully saved {len(val_indices)} validation samples to validation_dataset_25.csv")
 
 
 # --- START RANDOM FOREST HYPEROPT ---
 
-# Define the objective function to minimize (1 - ROC_AUC)
+# Define the objective function (now uses X_train, Y_train)
 def objective(params):
-    # Cast float values from hyperopt to int where required
     params['n_estimators'] = int(params['n_estimators'])
     params['max_depth'] = int(params['max_depth'])
     params['min_samples_leaf'] = int(params['min_samples_leaf'])
@@ -68,15 +71,13 @@ def objective(params):
     model = RandomForestClassifier(
         **params,
         random_state=0,
-        n_jobs=-1  # Use all available cores
+        n_jobs=-1
     )
 
-    # <<< CHANGED: Perform cross-validation on the 75% TRAINING set only >>>
+    # <<< CHANGED: Perform cross-validation *only on the training set* >>>
     score = cross_val_score(model, X_train, Y_train, cv=5, scoring='roc_auc', n_jobs=-1)
 
-    # We want to MINIMIZE loss, so we return (1 - mean_score)
     loss = 1 - np.mean(score)
-
     return {'loss': loss, 'status': STATUS_OK}
 
 # Define the search space for Random Forest hyperparameters
@@ -102,44 +103,37 @@ print("Minimum loss (1-ROC_AUC) achieved:", trials.best_trial['result']['loss'])
 
 # --- TRAIN FINAL MODEL ---
 
-# Get the actual parameter values from the 'best' dictionary
 final_params = space_eval(space, best)
-
-# Cast numerical params to int for the final model
 final_params['n_estimators'] = int(final_params['n_estimators'])
 final_params['max_depth'] = int(final_params['max_depth'])
 final_params['min_samples_leaf'] = int(final_params['min_samples_leaf'])
 
 print("Training final model with best params:", final_params)
 
-# <<< CHANGED: Train the final classifier on the 75% TRAINING set only >>>
 clf = RandomForestClassifier(
     **final_params,
     random_state=0,
     n_jobs=-1,
     oob_score=True
-).fit(X_train, Y_train)
+).fit(X_train, Y_train) # Fit on X_train, Y_train
 
 print(f"\nModel OOB (out-of-bag) score on training data: {clf.oob_score_:.3f}")
 
 # --- SAVE ARTIFACTS ---
 
 # 1. Save Feature Importances
-# <<< CHANGED: Get feature names from X_train >>>
 importances_df = pd.DataFrame({
-    'Feature': X_train.columns, 
+    'Feature': X_train.columns, # <<< CHANGED: Use X_train.columns
     'Importance': clf.feature_importances_
 })
 
 print("\nTop 10 Features (by Importance):")
 print(importances_df.sort_values(by='Importance', ascending=False).head(10))
 
-# Save with a new, specific name
 importances_df.to_csv("rf_feature_importances.csv", index=False)
 print("\nSuccessfully saved feature importances to rf_feature_importances.csv")
 
 # 2. Save the Model
-# Save with a new, specific name
 filename = "rf_model_tuned.joblib"
 dump(clf, filename)
 print(f"Successfully saved model to {filename}")
@@ -147,8 +141,7 @@ print(f"Successfully saved model to {filename}")
 # 3. Save the meta.json file
 print("Creating model_meta.json...")
 meta_data = {
-    # <<< CHANGED: Get feature names from X_train >>>
-    "feature_names": list(X_train.columns), 
+    "feature_names": list(X_train.columns),
     "threshold_cfu": 7.0 
 }
 
