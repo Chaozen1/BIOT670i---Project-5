@@ -30,7 +30,30 @@ num_spoilage_data['earlyvlatespoilage'] = (num_spoilage_data['Total mesophilic a
 X = num_spoilage_data.drop(['earlyvlatespoilage', 'Total mesophilic aerobic flora (log10 CFU.g-1)'], axis=1)
 Y = num_spoilage_data['earlyvlatespoilage']
 
-# X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25 , random_state=100, shuffle=True)
+# --- START OF NEW/CHANGED SECTION ---
+
+# <<< CHANGED: Split data into 75% Train and 25% Validation >>>
+# We use stratify=Y to ensure both sets have the same ratio of safe/not-safe
+X_train, X_val, Y_train, Y_val = train_test_split(
+    X, Y, 
+    test_size=0.25, 
+    random_state=100, 
+    shuffle=True, 
+    stratify=Y
+)
+
+print(f"Total samples: {len(X)}")
+print(f"Training samples (75%): {len(X_train)}")
+print(f"Validation samples (25%): {len(X_val)}")
+
+# <<< NEW: Save the 25% validation set to a CSV file >>>
+# Combine X_val and Y_val to save as a single file
+validation_data = X_val.copy()
+validation_data[Y_val.name] = Y_val # Y_val.name is 'earlyvlatespoilage'
+validation_data.to_csv("validation_dataset_25.csv", index=False)
+print(f"\nSuccessfully saved {len(validation_data)} validation samples to validation_dataset_25.csv")
+
+# --- END OF NEW/CHANGED SECTION ---
 
 
 # --- START RANDOM FOREST HYPEROPT ---
@@ -48,8 +71,8 @@ def objective(params):
         n_jobs=-1  # Use all available cores
     )
 
-    # Perform cross-validation on the full dataset
-    score = cross_val_score(model, X, Y, cv=5, scoring='roc_auc', n_jobs=-1)
+    # <<< CHANGED: Perform cross-validation on the 75% TRAINING set only >>>
+    score = cross_val_score(model, X_train, Y_train, cv=5, scoring='roc_auc', n_jobs=-1)
 
     # We want to MINIMIZE loss, so we return (1 - mean_score)
     loss = 1 - np.mean(score)
@@ -74,7 +97,7 @@ best = fmin(
     trials=trials
 )
 
-print("Best hyperparameters found (raw):", best)
+print("\nBest hyperparameters found (raw):", best)
 print("Minimum loss (1-ROC_AUC) achieved:", trials.best_trial['result']['loss'])
 
 # --- TRAIN FINAL MODEL ---
@@ -89,41 +112,43 @@ final_params['min_samples_leaf'] = int(final_params['min_samples_leaf'])
 
 print("Training final model with best params:", final_params)
 
-# Train the final classifier on the FULL dataset
+# <<< CHANGED: Train the final classifier on the 75% TRAINING set only >>>
 clf = RandomForestClassifier(
     **final_params,
     random_state=0,
     n_jobs=-1,
     oob_score=True
-).fit(X, Y)
+).fit(X_train, Y_train)
 
 print(f"\nModel OOB (out-of-bag) score on training data: {clf.oob_score_:.3f}")
 
 # --- SAVE ARTIFACTS ---
 
 # 1. Save Feature Importances
+# <<< CHANGED: Get feature names from X_train >>>
 importances_df = pd.DataFrame({
-    'Feature': X.columns,
-    'Importance': clf.feature_importances_  # <<< Use correct column name
+    'Feature': X_train.columns, 
+    'Importance': clf.feature_importances_
 })
 
 print("\nTop 10 Features (by Importance):")
 print(importances_df.sort_values(by='Importance', ascending=False).head(10))
 
 # Save with a new, specific name
-importances_df.to_csv("rf_feature_importances.csv", index=False) # <<< CHANGED
+importances_df.to_csv("rf_feature_importances.csv", index=False)
 print("\nSuccessfully saved feature importances to rf_feature_importances.csv")
 
 # 2. Save the Model
 # Save with a new, specific name
-filename = "rf_model_tuned.joblib" # <<< CHANGED
+filename = "rf_model_tuned.joblib"
 dump(clf, filename)
 print(f"Successfully saved model to {filename}")
 
-# 3. Save the meta.json file (this name is generic and can stay the same)
+# 3. Save the meta.json file
 print("Creating model_meta.json...")
 meta_data = {
-    "feature_names": list(X.columns), 
+    # <<< CHANGED: Get feature names from X_train >>>
+    "feature_names": list(X_train.columns), 
     "threshold_cfu": 7.0 
 }
 
