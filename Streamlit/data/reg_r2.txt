@@ -1,0 +1,1 @@
+R2 on test (naive): 0.549

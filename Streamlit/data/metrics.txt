@@ -1,0 +1,19 @@
+Model: L1-Logit
+Target: Total mesophilic aerobic flora (log10 CFU.g-1) (>=7 early/unsafe=1)
+Best C:0.046415888336127774
+Class weight:balanced
+Threshold:0.4
+Acc:0.962
+AUC:0.998
+CM:
+[[11  0]
+ [ 4 89]]
+
+              precision    recall  f1-score   support
+
+           0      0.733     1.000     0.846        11
+           1      1.000     0.957     0.978        93
+
+    accuracy                          0.962       104
+   macro avg      0.867     0.978     0.912       104
+weighted avg      0.972     0.962     0.964       104
